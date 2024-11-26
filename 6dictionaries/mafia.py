@@ -73,3 +73,6 @@ if guess == mafia:
     print("You found the mafia!")
 else:
     print("Mafia got you.")
+
+
+#multiple choice quiz instead

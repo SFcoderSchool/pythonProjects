@@ -6,7 +6,7 @@ from pprint import pprint
 #falling will make you start from the beginning again
 #the other side will be strong glass and you get to move forward
 
-
+#!!!!!!!!!!!!!!use more indexing 0 or 1 as answer key and use indexing
 #generating a list of correct answers
 answerKey = []
 for i in range(10):
@@ -15,6 +15,7 @@ for i in range(10):
     answerKey.append("left")
   else:
     answerKey.append("right")
+
 
 #glass road for visulization
 glassRoad = []

@@ -44,3 +44,23 @@ pprint(list2d)
 
 #Exercise: try making 8 rows and each row has 8 random numbers each
 #dont forget to append the 8 rows to a list
+
+
+
+#create a list of fruits put 4 fruits inside
+#print the first item or second item
+#in the third index add a list in the list
+
+fruits = ["apple","grapes","banana"]
+print(fruits[0])
+
+#add a third item to the list next and have it be a list
+fruits = ["apple","grapes","banana"]
+
+groceries = [
+    ["apple","grapes","banana"],
+    ["beef", "pork"],
+    ["chip","soda"]
+]
+
+#access pork or beef
