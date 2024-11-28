@@ -55,7 +55,8 @@ fruits = ["apple","grapes","banana"]
 print(fruits[0])
 
 #add a third item to the list next and have it be a list
-fruits = ["apple","grapes","banana"]
+fruits = ["apple","grapes",["oranges", "pears", ""],"banana"]
+
 
 groceries = [
     ["apple","grapes","banana"],
