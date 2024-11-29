@@ -1,92 +1,99 @@
 import readchar
 import os
 import random
+from pprint import pprint
 
-thing = "_"
+space = "_"
 player = "♙"
 enemy = "♞"
 goal = "♚"
-
-
 board = []
-gsize = 8
-for x in range (gsize):
-	li = []
-	for i in range (gsize):
-		li.append(thing)
-	board.append(li)
-	
-y = 0
-x = 0
-board[y][x] = player
+px = 0
+py = 0
+ex = 0
+ey = 0
+gx = 0
+gy = 0
 
-enemyY = []
-enemyX = []
+#generates the game 8x8 board
 
-for r in range (3):
-	enemyY.append(random.randint(2, len(board) - 1))
-	enemyX.append(random.randint(2, len(board) - 1))
+def generateBoard():
+	global px, py, ex, ey, gx, gy, board
+	board = []
+	bsize = 8
+	for x in range (bsize):
+		row = []
+		for i in range (bsize):
+			row.append(space)
+		board.append(row)
+		
+	#placing the player on the map	
+	py = random.randint(0,7)
+	px = random.randint(0,7)
+	board[py][px] = player
 
-for i in range (len(enemyY)):
-	board[enemyY[i]][enemyX[i]] = enemy
+	#placing the enemy on the map
+	ey = random.randint(0,7)
+	ex = random.randint(0,7)
+	board[ey][ex] = enemy
 
-def loadBoard():
-	for b in range (gsize):
-		print ("".join(board[b]))
-loadBoard()
+	gy = random.randint(0,7)
+	gx = random.randint(0,7)
+	board[gy][gx] = goal
 
-
-def enemyMovement(enemyY, enemyX):
+#enemey will follow the player
+#when the player is on the right side of the enemy, enemy moves right
+#etc.
+def enemyMovement():
+	global ey, ex, py, px
 	rmove = random.randint(1, 4)
-	board[enemyY][enemyX] = thing
-	if rmove == 1:
-		enemyY += 1
-	elif rmove == 2:
-		enemyX += 1
-	elif rmove == 3:
-		enemyY -= 1
-	elif rmove == 4:
-		enemyX -= 1
-	if enemyY < 0:
-		enemyY = len(board) - 1
-	elif enemyY > len(board) - 1:
-		enemyY = 0
-	elif enemyX < 0:
-		enemyX = len(board) - 1
-	elif enemyX > len(board) - 1:
-		enemyX = 0
-	return(enemyY, enemyX)
+	board[ey][ex] = space
+	if px > ex:
+		ex += 1
+	elif px < ex:
+		ex -= 1
+	elif py > ey:
+		ey += 1
+	elif py < ey:
+		ey -= 1
+	board[ey][ex] = enemy
+
+def playerMovement():
+	global px, py
+	k = readchar.readkey()
+	board[py][px] = space
+	if k == "w" and py != 0:
+		py -= 1
+	if k == "a" and px != 0:
+		px -= 1
+	if k ==	"s" and py != len(board) - 1:
+		py += 1
+	if k == "d" and px != len(board) - 1:
+		px += 1
+	board[py][px] = player	
+
+def checkWin():
+	if px == gx and py == gy:
+		return True
+	return False
+
+def checkLoss():
+	if ex == px and ey == py:
+		return True
+	return False
+
+generateBoard()
 
 while True:
-	k = readchar.readkey()
-	board[y][x] = thing
-	if k == "w" and y != 0:
-		y -= 1
-	if k == "a" and x != 0:
-		x -= 1
-	if k ==	"s" and y != len(board) - 1:
-		y += 1
-	if k == "d" and x != len(board) - 1:
-		x += 1
-	board[y][x] = player
+	pprint(board)
+	playerMovement()
 	
-	for i in range (len(enemyY)):
-		enemyY[i], enemyX[i] = enemyMovement(enemyY[i], enemyX[i])
-		board[enemyY[i]][enemyX[i]] = enemy
-		os.system("cls")
-		loadBoard()
+	enemyMovement()
 
-	for i in range(len(enemyY)):
-		if enemyY[i]==y and enemyX[i] == x:
-			quit()
+	if checkWin():
+		generateBoard()
 
-	if y == len(board) - 1 and x == len(board) - 1:
-		board[y][x] = thing
-		y = 0
-		x = 0
-		board[y][x] = player
-		enemyY.append(random.randint(2, len(board) - 1))
-		enemyX.append(random.randint(2,len(board) - 1))
-		
-		os.system("cls")
-		loadBoard()
+	os.system("cls")
+	if checkLoss():
+		print("You lose")
+		break	
