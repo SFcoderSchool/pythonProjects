@@ -2,13 +2,14 @@ import readchar
 import os
 import random
 
-thing = "🤨"
-player = "🥶"
-enemy = "👺"
+thing = "_"
+player = "♙"
+enemy = "♞"
+goal = "♚"
 
 
 board = []
-gsize = 20
+gsize = 8
 for x in range (gsize):
 	li = []
 	for i in range (gsize):

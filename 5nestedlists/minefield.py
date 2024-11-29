@@ -1,5 +1,7 @@
 import random
 from pprint import pprint
+import readchar
+import os
 
 #this is a game where the player has a starting position in the grid
 #the player then moves up traversing the 2d list and tries to avoid the mines
@@ -53,23 +55,23 @@ dirtgrid[y][x] = player
 pprint(dirtgrid)
 
 while True:
-  movement = input("Should the player move left, right, or up: ") 
+  movement = k = readchar.readkey()
   #player will always move up one row, the option of left or right is for diagonally up
-  if movement == "left":
+  if movement == "a":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"
     x -= 1
     y -= 1
     dirtgrid[y][x] = player
-  if movement == "right":
+  if movement == "d":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"
     x += 1
     y -= 1
     dirtgrid[y][x] = player
-  if movement == "up":
+  if movement == "w":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"
@@ -82,6 +84,7 @@ while True:
     x=2
     y=9
     dirtgrid[y][x] = player
+  os.system("cls")
   pprint(dirtgrid)
   #if the y(row) index is at the final row then player wins
   if y == 0:

@@ -22,5 +22,3 @@ for i in range(len(states)):
         print("Wrong!")
 
 print("Your final test score is:", score)
-
-#pokemon quiz

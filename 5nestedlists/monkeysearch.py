@@ -20,9 +20,10 @@ for i in range(10): #10 total boxes
     temp.append(hide)
   board.append(temp) #load filled box in truck
 
+#random column and row
 randcolumn = random.randint(0,9)
 randrow = random.randint(0,9)
-
+#place monkey in a random place
 board[randrow][randcolumn] = find
 
 for i in range(10):
@@ -35,7 +36,7 @@ stop = time.time() #end time
 
 if column == randcolumn+1 and row == randrow+1:
   print("correct!")
-  print( round(stop-start,2) ) #timer math
+  print( round(stop-start,2) ) #how much time it took you
 else: 
   print("wrong")
 
