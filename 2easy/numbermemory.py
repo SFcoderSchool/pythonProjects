@@ -43,11 +43,11 @@ while number == memory:
   number = number + str(addnum)
   print("number:",number)
   time.sleep(1+(score//5))
-  os.system("clear")
+  os.system("cls")
   memory = input("whats the number? ")
   if memory == number:
     score = score + 1
-  os.system("clear")
+  os.system("cls")
 print("game over! score:",score)
 
 
