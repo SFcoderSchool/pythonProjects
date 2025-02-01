@@ -66,6 +66,7 @@
 # Generate a list of 10 random numbers.
 
 
+
 #6
 # Write a program that iterates through a list of numbers and prints all numbers greater than 10.
 # Declare a variable and assign it to a string. Print that string with an added space in between all of the letters. If there's a space in the string, you should not consider it a letter and not add an extra space.
@@ -95,7 +96,7 @@
 
 #9
 # Declare a variable and assign it to a string. Write a regular expression to check that a string contains only a certain set of characters: a-z, A-Z and 0-9. If it does, print ”Yes”, otherwise print ”No”. You can use the ”re” module to solve.
-# Declate a variable and assign it to an integer. Convert the integer into it's binary equivalent using an algorithm. No built in functions.
+# Declare a variable and assign it to an integer. Convert the integer into it's binary equivalent using an algorithm. No built in functions.
 
 
 #10

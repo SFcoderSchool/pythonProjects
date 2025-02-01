@@ -6,6 +6,7 @@
 # Teleport cat to a new random location every 1 second
 # Have the cat always look in the direction of the mouse pointer
 # Program the cat to forever change colors.
+# Make a character forever move and bounce off the walls.
 
 
 # Level 2
@@ -17,7 +18,7 @@
 # Program a food that will disappear to a random place when touched by the mouse.
 # Cat moves up and down bouncing off the edge of the screen
 # Program the cat to grow 10 times then shrink 10 times.
-
+# Have a character ask a question with the ask block in sensing. Check if the answer to the question is correct.
 
 
 # Level 3
@@ -50,6 +51,7 @@
 
 
 # Level 6
+# Program the cat to move Up, Down, Left, Right, with arrow keys. Have the cat teleport to the left side of the screen when touching the right side of the screen and vice versa.
 # Forever make clones appear in random places.
 # Build 10 clones and send them to random places on the screen, wait 1 second delete the clones
 # Forever make clones. The clones will move, bounce off the walls, and turn 1 degree.
@@ -73,8 +75,7 @@
 # Forever create clones of a character in random places. If mouse touches the character add 1 to a variable and delete the clone.
 # Forever create clones of a character in random places and then move around bouncing off the walls. If mouse touches the character add 1 to a variable and delete the clone.
 # Forever create clones of a character to appear on the top edge of the screen. Have the clones move down. Delete the clone when mouse touches it.
-# Make a variable equal to a random number. Ask the user to guess the random number. Check if your answer was correct.
-
+# Make a HP variable for THIS SPRITE ONLY. Forever create clones of a character in random places starting with 3 HP. When clicking on the clone HP goes down and delete the clone when at 0 HP.
 
 
 
@@ -82,6 +83,9 @@
 
 
 # Level 9
+# Make a variable equal to a random number. Ask the user to guess the random number. Check if your answer was correct.
+# Make a fortune variable and set the variable to a random number 1-3. Say "Good" when forturne is 3, say "Bad" when fortune is 1, say "Okay" when fortune is 2.
+# Make a coin variable and set the variable to a random number 1-2. When the variable lands on 1 have the cat say "Heads!" Say "Tails" when the coin lands on 2.
 # Make a dice variable and set the variable to a random number 1-6. Have the cat say the dice number.
 # Make 2 variables and set them to each different random numbers. Have the cat say the larger random number.
 # Make 2 variables and set them to each different random numbers. Have the cat say if two numbers match.
