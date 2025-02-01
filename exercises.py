@@ -97,6 +97,8 @@
 #9
 # Declare a variable and assign it to a string. Write a regular expression to check that a string contains only a certain set of characters: a-z, A-Z and 0-9. If it does, print ”Yes”, otherwise print ”No”. You can use the ”re” module to solve.
 # Declare a variable and assign it to an integer. Convert the integer into it's binary equivalent using an algorithm. No built in functions.
+# Declare a variable and assign it to an integer. Convert the integer into it's hexadecimal equivalent using an algorithm. No built in functions.
+# Declare a variable and assign it to an integer. Convert the integer into it's octal equivalent using an algorithm. No built in functions.
 
 
 #10
