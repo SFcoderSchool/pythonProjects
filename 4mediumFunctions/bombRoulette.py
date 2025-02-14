@@ -9,8 +9,7 @@ bombs = []
 playerlives = 4
 computerlives = 4
 
-#whos turn it is, player goes first
-turn = "player"
+
 
 def printStats():
   print("Player lives:",playerlives)
@@ -27,21 +26,23 @@ def reload():
 def playerMove():
   global playerlives, computerlives, turn
   #taking a bomb out of the inventory
-  bomb = bombs.pop(0)
+  hand = bombs.pop(0)
   choice = input("who will you throw bomb at?")
   #choose to throw at yourself or the computer
   if choice == "self": 
     #checking if it was a real bomb or not
-    if bomb == "dud":
-      print("No damage, you are fine")
+    if hand == "dud":
+      print("It's a dud, you healed")
+      playerlives = playerlives + 1
     else:
       print("You bombed yourself!")
       playerlives = playerlives - 1
   #if you choose to throw it at the computer
   if choice == "computer":
     #checking if it was a real bomb or not
-    if bomb == "dud":
-      print("you threw a dud at the computer")
+    if hand == "dud":
+      print("you threw a dud at the computer, they healed")
+      computerlives = computerlives + 1
     else:
       print("You bombed the computer!")
       computerlives = computerlives - 1
@@ -51,37 +52,34 @@ def playerMove():
 def computerMove():
   global playerlives, computerlives, turn
   #taking a bomb out of the inventory
-  bomb = bombs.pop(0)
+  hand = bombs.pop(0)
   choice = random.randint(1,2)
   #computer randomly decides to throw at you or themselves
   if choice == 1:
     #checking if it was a real bomb or not
-    if bomb == "dud":
-      print("computer threw a dud at themselves")
-    else:
+    if hand == "bomb":
       print("computer bombed themselves lol")
       computerlives = computerlives - 1
+    else:
+      print("computer threw a dud at themselves, they healed")
+      computerlives = computerlives + 1
   if choice == 2:
     #checking if it was a real bomb or not
-    if bomb == "dud":
-      print("computer threw a dud at you!")
-    if bomb == "bomb":
+    if hand == "bomb":
       print("computer threw a bomb at you!")
       playerlives = playerlives - 1
+    else:
+      print("computer threw a dud at you!, you healed!")
+      playerlives = playerlives + 1
     turn = "player"
     #change turns ONLY when throwing it at the opponent
 
 
 
 while playerlives>0 and computerlives>0:
-  if len(bombs) < 2:
+  if len(bombs) <= 0:
     reload()
   printStats()
-  #if your turn
-  if turn == "player":
-    playerMove()
-
+  playerMove()
   printStats()
-  #when the computer's turn
-  if turn == "computer":
-    computerMove()
+  computerMove()

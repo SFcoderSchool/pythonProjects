@@ -55,23 +55,23 @@ dirtgrid[y][x] = player
 pprint(dirtgrid)
 
 while True:
-  movement = k = readchar.readkey()
+  k = readchar.readkey()
   #player will always move up one row, the option of left or right is for diagonally up
-  if movement == "a":
+  if k == "a":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"
     x -= 1
     y -= 1
     dirtgrid[y][x] = player
-  if movement == "d":
+  if k == "d":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"
     x += 1
     y -= 1
     dirtgrid[y][x] = player
-  if movement == "w":
+  if k == "w":
     #erease the player from curent location, change the yx row&column
     #place the player down in the new yx row&column
     dirtgrid[y][x] = "__"

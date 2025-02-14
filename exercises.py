@@ -14,6 +14,9 @@
 # Declare two variables and assign them both to integers. Print their sum, difference, product, and quotient.
 # Declare a variable and assign it to a Boolean value. Print the opposite of the Boolean value.
 # Declare a variable and assign it to a number. Multiply the number by itself and print the result.
+# Declare a variable and assign it to your age. Print out "I am [age] years old!"
+# Declate a variable and assign it to how much money you have. Print out "I have [money] dollars!"
+
 
 #2
 # Print the numbers from 1 to 100 and skip anything that is divisible by 3.
@@ -92,7 +95,8 @@
 # Declare two variables and assign them to strings. Print the number of the positions where they contain the same length 3 substring. So 'xxzaazz' and 'xxzaaz' yields 4, since the 'xxz', 'xza', 'zaa', and 'aaz' substrings appear in the same place in both strings. You cannot use a library for this solution.
 # Given a list of numbers 6, 10, 7, 2, 4, find and print the sum of difference between each number going left to right.
 # Write a function which takes in a string in camel case and converts it into snake case.
-
+# Generate a 2d list of 10 rows each with 10 columns of random numbers. Sum up the numbers in a diagonal line starting from index [0][0] to index [9][9]
+# Generate a 2d list of 5 rows each with 5 columns of random numbers. In each row replace a random column's number with -11.
 
 #9
 # Declare a variable and assign it to a string. Write a regular expression to check that a string contains only a certain set of characters: a-z, A-Z and 0-9. If it does, print ”Yes”, otherwise print ”No”. You can use the ”re” module to solve.
