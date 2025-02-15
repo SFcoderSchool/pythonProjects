@@ -24,6 +24,7 @@ computerlives = 4
 while playerlives>0 and computerlives>0:
   print("Your lives:", playerlives)
   print("Computer lives:", computerlives)
+  print("Bombs left:", len(bombs))
   #player's turn first
   #taking a bomb out of the inventory
   hand = bombs.pop(0)
@@ -73,6 +74,7 @@ while playerlives>0 and computerlives>0:
 
   #reload when run out of bombs
   if len(bombs) <= 0:
+    print("Reloading.....")
     for i in range(3):
       bombs.append("dud")
       bombs.append("bomb")

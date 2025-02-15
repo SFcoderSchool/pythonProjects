@@ -14,9 +14,10 @@ computerlives = 4
 def printStats():
   print("Player lives:",playerlives)
   print("Computer lives:",computerlives)
-  print(len(bombs))
+  print("Bombs left:",len(bombs))
 
 def reload():
+  print("Reloading....")
   for i in range(3):
     bombs.append("dud")
     bombs.append("bomb")
