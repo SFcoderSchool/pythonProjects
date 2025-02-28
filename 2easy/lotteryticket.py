@@ -30,26 +30,13 @@ while rnum3 == rnum1 or rnum3 == rnum2:
 print(rnum1,rnum2,rnum3)
 correct = 0
 
-if num1 == rnum1:
-  correct = correct + 1
-if num1 == rnum2:
-  correct = correct + 1
-if num1 == rnum3:
+if num1 == rnum1 or num1 == rnum2 or num1 == rnum3:
   correct = correct + 1
 
+if num2 == rnum1 or num2 == rnum2 or num2 == rnum3:
+  correct = correct + 1
 
-if num2 == rnum1:
-  correct = correct + 1
-if num2 == rnum2:
-  correct = correct + 1
-if num2 == rnum3:
-  correct = correct + 1
-  
-if num3 == rnum1:
-  correct = correct + 1
-if num3 == rnum2:
-  correct = correct + 1
-if num3 == rnum3:
+if num3 == rnum1 or num3 == rnum2 or num3 == rnum3:
   correct = correct + 1
 
 print(rnum1)
