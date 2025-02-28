@@ -19,7 +19,7 @@ print(name)
 #4) print out the three variables
 
 
-# Next lets explaing variable math
+# Next lets explain variable math
 # simply start by showing whats intuitive but wrong
 
 money + 100
@@ -27,6 +27,7 @@ print(money)
 
 # in this case the money variable remained unchanged
 # explain how the computer calculates an answer but doesnt rememeber it
-# next explain the importance of the = symbol and how it is necessary to save the answer to a variable
+# next explain the importance of the = symbol and how it is necessary to save the result of the math equation to a variable
 money = money + 100
 print(money)
+
