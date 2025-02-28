@@ -16,3 +16,5 @@ celebrity = input("Enter a celebrity: ")
 print("Roses are", color)
 print(pluralNoun + " are blue")
 print("I love", celebrity)
+
+#CLASSWORK: ask for 6 inputs and write a story with those variables
