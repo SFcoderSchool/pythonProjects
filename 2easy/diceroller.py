@@ -82,3 +82,5 @@ print("Counter:",count)
 
 #Bonus: at the final triples it says "doubles" then "triples" because technically a triple counts as a double
 #ask your student how to fix that
+#Bonus: look for snake eyes (check if all three dices land on the number 1) or (check if two dices land on the number 1)
+#Bonus: look for box cars (chck if all three dices land on the number 6) or (check if two dices land on the number 6)
