@@ -8,17 +8,26 @@ fruits = ["apple","grapes","banana"]
 print(fruits[0])
 
 #add a third item to the list next and have it be a list
-fruits = ["apple","grapes",["oranges", "pears", ""],"banana"]
+fruits = ["apple","grapes",["oranges", "pears", "meme"],"banana"]
+
+#print index 1 and index 2
+print(fruits[1])
+print(fruits[2])
+#notice the difference?
+
+#now print out the first item from the list in index2
+print(fruits[2][0])
 
 
+#this time lets create a list that would ONLY hold other lists
 groceries = [
     ["apple","grapes","banana"],
     ["beef", "pork"],
     ["chip","soda"]
 ]
-
-#access pork or beef
-
+#access pork
+print(groceries[1][1])
+#access apple
 
 
 #automation of generating a 2dlist
