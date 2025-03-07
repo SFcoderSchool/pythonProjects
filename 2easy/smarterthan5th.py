@@ -1,3 +1,6 @@
+#Important!!!!!!!!!!!!!!!!!!!
+#Show the students how to do the first two questions which allows you to utilize 'in' and lower() 
+
 score = 0
 
 print("1. If a backyard is 50 feet long and 20 feet wide, how many square feet is the yard?")
@@ -17,6 +20,9 @@ if answer.lower() == "nitrogen": #flexible answer for case sensitivity
 else: 
   print("you are incorrect")
 
+
+#Important!!!!!!!!!!!!!
+#Now let the students do 6 more questions on their own.
 
 print("3. How many feet are there in 75 yards?")
 answer = input()
