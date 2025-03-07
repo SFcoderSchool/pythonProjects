@@ -19,18 +19,19 @@ import random
 # 6. ask the user if they would like to target (self / computer)
 # 7. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
 # 8. make chosen target lose a life if it is a "bomb"
+# 9. make chosen targets gain a life if it is a "dud"
 
-# 9. the computer will pick target at random 1 and 2 (computer / player)
-# 10. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
-# 11. make chosen target lose a life if it is a "bomb"
+# 10. the computer will pick target at random 1 and 2 (computer / player)
+# 11. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
+# 12. make chosen target lose a life if it is a "bomb"
+# 13. make chosen targets gain a life if it is a "dud"
 
-# 12. check to see if bombs list is empty, if it is then add 3 "dud" and 3 "bomb" into the list and then shuffle
+# 14. check to see if bombs list is empty, if it is then add 3 "dud" and 3 "bomb" into the list and then shuffle
 
-# 13. add a while True to repeat steps 4 to 12
-# 14. include a condition to stop the game when either computer or player run out of lives
+# 15. add a while True to repeat steps 4 to 12
+# 16. include a condition to stop the game when either computer or player run out of lives
 
 # bonus 1: update code to stop the while loop with a condition
-# bonus 2: make chose targets gain a life if it is a "dud"
 
 
 
@@ -62,17 +63,15 @@ while playerlives>0 and computerlives>0:
       computerlives = computerlives - 1
   else:
     print("it was a dud")
-# ---------------- BONUS 2 ----------------
-    # if choice == "self":
-    #   print("you threw a dud at yourself, gain a life")
-    #   playerlives = playerlives + 1
-    # if choice == "computer":
-    #   print("you threw a dud at the computer, computer gains a life")
-    #   computerlives = computerlives + 1
+    if choice == "self":
+      print("you threw a dud at yourself, gain a life")
+      playerlives = playerlives + 1
+    if choice == "computer":
+      print("you threw a dud at the computer, computer gains a life")
+      computerlives = computerlives + 1
 
   hand = bombs.pop(0)
   choice = random.randint(1,2)
-
   if hand == "bomb":
     print("it was a bomb")
     if choice == 1:
@@ -83,19 +82,19 @@ while playerlives>0 and computerlives>0:
       playerlives = playerlives - 1
   else:
     print("it was a dud")
-# ---------------- BONUS 2 ----------------
-    # if choice == 1:
-    #   print("computer threw a dud at itself, gain a life")
-    #   computerlives = computerlives + 1
-    # if choice == 2:
-    #   print("computer threw a dud at you, computer gains a life")
-    #   playerlives = playerlives + 1
+    if choice == 1:
+      print("computer threw a dud at itself, gain a life")
+      computerlives = computerlives + 1
+    if choice == 2:
+      print("computer threw a dud at you, computer gains a life")
+      playerlives = playerlives + 1
 
-    
   if len(bombs) <= 0:
     print("Reloading.....")
     for i in range(3):
       bombs.append("dud")
       bombs.append("bomb")
     random.shuffle(bombs)
-  
+
+  # if playerLives < 0 or computerLives < 0:
+  #   break

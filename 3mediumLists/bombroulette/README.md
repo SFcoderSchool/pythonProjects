@@ -40,6 +40,7 @@ print("Bombs left:", len(bombs))
 6. ask the user if they would like to target (self / computer)
 7. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
 8. make chosen target lose a life if it is a "bomb"
+9. make chosen targets gain a life if it is a "dud"
 
 ```python
 hand = bombs.pop(0)
@@ -54,11 +55,19 @@ if hand == "bomb":
     computerlives = computerlives - 1
 else:
   print("it was a dud")
+  if choice == "self":
+    print("you threw a dud at yourself, gain a life")
+    playerlives = playerlives + 1
+  if choice == "computer":
+    print("you threw a dud at the computer, computer gains a life")
+    computerlives = computerlives + 1
+
 ```
 
-9. the computer will pick target at random 1 and 2 (computer / player)
-10. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
-11. make chosen target lose a life if it is a "bomb"
+10. the computer will pick target at random 1 and 2 (computer / player)
+11. check to see if the bomb is "bomb" then say "it was a bomb" otherwise say "it was a dud"
+12. make chosen target lose a life if it is a "bomb"
+13. make chosen targets gain a life if it is a "dud"
 
 ```python
 hand = bombs.pop(0)
@@ -74,9 +83,15 @@ if hand == "bomb":
     playerlives = playerlives - 1
 else:
   print("it was a dud")
+  if choice == 1:
+    print("computer threw a dud at itself, gain a life")
+    computerlives = computerlives + 1
+  if choice == 2:
+    print("computer threw a dud at you, computer gains a life")
+    playerlives = playerlives + 1
 ```
 
-12. check to see if bombs list is empty, if it is then add 3 "dud" and 3 "bomb" into the list and then shuffle
+14. check to see if bombs list is empty, if it is then add 3 "dud" and 3 "bomb" into the list and then shuffle
 
 ```python
 if len(bombs) <= 0:
@@ -87,8 +102,8 @@ if len(bombs) <= 0:
   random.shuffle(bombs)
 ```
 
-13. add a while True to repeat steps 4 to 12
-14. include a condition to stop the game when either computer or player run out of lives
+15. add a while True to repeat steps 4 to 12
+16. include a condition to stop the game when either computer or player run out of lives
 
 ```python
 while True:
@@ -140,23 +155,4 @@ while True:
 
 ```python
 while playerlives>0 and computerlives>0:
-```
-
-2. make chose targets gain a life if it is a "dud"
-
-```python
-if choice == "self":
-  print("you threw a dud at yourself, gain a life")
-  playerlives = playerlives + 1
-if choice == "computer":
-  print("you threw a dud at the computer, computer gains a life")
-  computerlives = computerlives + 1
-
-
-if choice == 1:
-  print("computer threw a dud at itself, gain a life")
-  computerlives = computerlives + 1
-if choice == 2:
-  print("computer threw a dud at you, computer gains a life")
-  playerlives = playerlives + 1
 ```
