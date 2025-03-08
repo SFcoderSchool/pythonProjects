@@ -1,4 +1,4 @@
-# Connections
+# Connections (Lists)
 
 # Steps
 # 1. create 4 list of topics with 4 words per topic
