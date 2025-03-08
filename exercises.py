@@ -107,10 +107,12 @@
 # Write a function which takes in a string in camel case and converts it into snake case.
 # Generate a 2d list of 10 rows each with 10 columns of random numbers. Sum up the numbers in a diagonal line starting from index [0][0] to index [9][9]
 # Generate a 2d list of 5 rows each with 5 columns of random numbers. In each row replace a random column's number with -11.
+# Declare two variables, list1 and list2, and assign them to [1,2,3] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from list1 is the key and item from list2 is the value.
 # Declare an integer called debitcard and assign it to 4253665879515786. Output ”valid” if the values are valid. Use these rules to determine if the debit card number is valid.
 # 1. It must start with a 4, 5, or 6.
 # 2. It must contain exactly 16 digits.
 # 3. It can not have 4 or more consecutive repeated digits.
+
 
 #9
 # Declare a variable and assign it to a string. Write a regular expression to check that a string contains only a certain set of characters: a-z, A-Z and 0-9. If it does, print ”Yes”, otherwise print ”No”. You can use the ”re” module to solve.
@@ -118,6 +120,7 @@
 # Declare a variable and assign it to an integer. Convert the integer into it's hexadecimal equivalent using an algorithm. No built in functions.
 # Declare a variable and assign it to an integer. Convert the integer into it's octal equivalent using an algorithm. No built in functions.
 # Declare a string and assign it to ”135246ABCzyx”. Output the sorted version of the string using these rules. Uppercase letters in front, lowercase letters after, then odd numbers, finally even numbers
+# Declare two variables assigned to two positive integers, then output the greatest common divisor of the two numbers. (105,45) would output 15, while (36, 42) would output 6.
 
 #10
 # Implement radix sort and call it on a list of 10 numbers, sorting from smallest to largest. You cannot use a library for this solution.
@@ -125,3 +128,4 @@
 # Implement Merge sort and call it on a list of 10 numbers, sorting from smallest to largest. You cannot use a library for this solution.
 # Implement Selection sort and call it on a list of 10 numbers, sorting from smallest to largest. You cannot use a library for this solution.
 # Implement Bubble sort and call it on a list of 10 numbers, sorting from smallest to largest. You cannot use a library for this solution.
+
