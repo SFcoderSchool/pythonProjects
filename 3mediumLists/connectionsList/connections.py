@@ -2,26 +2,27 @@
 
 # Steps
 # 1. create 4 list of topics with 4 words per topic
-# 2. sort each list using .sort()
-# 3. create a words list and append all the words from each topic into it
+# 2. create a words list and append all the words from each topic into it
 
-# 4. shuffle the words list
-# 5. loop through the words list and display each word
+# 3. shuffle the words list
+# 4. loop through the words list and display each word
 
-# 6. create an empty list called choices
-# 7. ask the user 4 times to enter a word
-# 8. append their entered word into the choices list
-# 9. sort the choices list using sort()
+# 5. create an empty list called choices
+# 6. ask the user 4 times to enter a word
+# 7. append their entered word into the choices list
+# 8. check to see if choices matches any of the topics list 
+# 9. if there is then remove the words in choices from the words in the words list
 
-# 10. check to see if choices matches any of the topics list
-# 11. if there is then remove the words in choices from the words in the words list
+# 10. will run into issue where the choices don't match any topics list because the order is inconsistent
+# 11. sort each topic list using .sort()
+# 12. sort the choices list using .sort()
 
-# 12. add a while True to repeat steps 4 - 11
-# 13. add a condition to break the loop
+# 13. add a while True to repeat steps 4 - 11
+# 14. add a condition to break the loop
 
-# 14. create a lives variable before the while loop
-# 15. lose a life when the choice does not match any topics
-# 16. add condition to break the loop when no more lives
+# 15. create a lives variable before the while loop
+# 16. lose a life when the choice does not match any topics
+# 17. add condition to break the loop when no more lives
 
 # Bonus
 # 1. update the while statement to use a condition instead of break
