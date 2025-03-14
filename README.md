@@ -24,7 +24,7 @@
 
 - <font color="#B90000">**Lecture**</font>: Conditionals
 - Fortune Cookie
-- Magic 8 Ball
+- [Magic 8 Ball](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/magic8ball)
 - Rock Paper Scissors
 - Emoji Riddle
 - Song Quiz
