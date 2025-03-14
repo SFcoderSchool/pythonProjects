@@ -33,7 +33,7 @@
 
 - <font color="#B90000">**Lecture**</font>: For Loops
 - Turtle Shapes
-- Random Number Guesser
+- [Random Number Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numberguesser)
 
 ---
 
