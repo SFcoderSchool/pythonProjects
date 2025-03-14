@@ -6,11 +6,11 @@
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: Basic Data Types
-- <font color="#B90000">**Lecture**</font>: Variables
+- <font color="#B90000">**Lecture**</font>: [Basic Data Types](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/datatypes.py)
+- <font color="#B90000">**Lecture**</font>: [Variables](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/variables.py)
 - Coin Flip
 - Bit Life
-- Dice Roll (Easy)
+- [Dice Roll](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dicerolleasy) (Easy)
 
 ---
 
