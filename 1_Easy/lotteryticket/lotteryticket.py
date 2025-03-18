@@ -1,11 +1,29 @@
-#1. Allow user to create 3 variables to hold 3 inputs of numbers
-#1.5 convert data into integers
-#2 Generate 3 random numbers
-#3 Check if you got any matches using if statements
-#4 count matches
-#5 using the count output how much you win
+# Lottery Ticket 
+# Difficulty: ⭐
+# Guess 3 numbers, check to see if you got it right
 
+# Steps
+# 1. Generate a random number between 1 to 10 and print it
 
+# 2. Ask the user to guess the number
+# 3. Check to see if the user is correct or incorrect
+
+# 4. Change the input data to an int (Test again)
+
+# 5. Generate 2 more random number between 1 and 10
+# 6. Ask 2 more times with 2 new variables
+
+# 7. check to see if the user is correct or incorrect
+
+# 8. create a count and count how many guesses were guessed correctly
+
+# 9. player wins alot of money if there are 3 correct
+# 10. player wins a moderate amount of money if there are 2 correct
+# 11. player wins a little bit of money if there is 1 correct
+# 12. player wins nothing if there are no correct
+
+# Bonus
+# 1. make all random number unique
 
 import random
 
