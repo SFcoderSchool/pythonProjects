@@ -6,11 +6,11 @@
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: Basic Data Types
-- <font color="#B90000">**Lecture**</font>: Variables
+- <font color="#B90000">**Lecture**</font>: [Basic Data Types](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/datatypes.py)
+- <font color="#B90000">**Lecture**</font>: [Variables](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/variables.py)
 - Coin Flip
 - Bit Life
-- Dice Roll (Easy)
+- [Dice Roll](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dicerolleasy) (Easy)
 
 ---
 
@@ -18,13 +18,13 @@
 - Dice Guesser
 - Dice Roller
 - Dice Stealing
-- MadLibs
+- [MadLibs](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/madlibs)
 
 ---
 
 - <font color="#B90000">**Lecture**</font>: Conditionals
 - Fortune Cookie
-- Magic 8 Ball
+- [Magic 8 Ball](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/magic8ball)
 - Rock Paper Scissors
 - Emoji Riddle
 - Song Quiz
@@ -33,13 +33,13 @@
 
 - <font color="#B90000">**Lecture**</font>: For Loops
 - Turtle Shapes
-- Random Number Guesser
+- [Random Number Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numberguesser)
 
 ---
 
 - Trivia
 - Are you smarter than a 5th grader
-- Lottery Ticket
+- [Lottery Ticket](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/lotteryticket)
 - Math Problem Generator
 - Series of Unfortunate Events
 - Series of Fortunate Events?

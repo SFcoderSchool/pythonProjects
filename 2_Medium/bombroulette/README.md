@@ -18,6 +18,8 @@ Based on the hit game "buckshot roulette" a 2 player russian roulette game!
 3. add 3 "dud" and 3 "bomb" into the list and then shuffle
 
 ```python
+import random
+
 bombs = []
 for i in range(3):
   bombs.append("dud")
