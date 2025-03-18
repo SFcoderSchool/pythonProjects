@@ -39,7 +39,7 @@
 
 - Trivia
 - Are you smarter than a 5th grader
-- Lottery Ticket
+- [Lottery Ticket](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/lotteryticket)
 - Math Problem Generator
 - Series of Unfortunate Events
 - Series of Fortunate Events?
