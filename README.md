@@ -18,7 +18,7 @@
 - Dice Guesser
 - Dice Roller
 - Dice Stealing
-- MadLibs
+- [MadLibs](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/madlibs)
 
 ---
 
