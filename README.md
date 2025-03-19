@@ -53,7 +53,7 @@
 - Easter Egg Hunt?
 - Dreidel Game
 - Choose Your Own Adventure
-- Random Password Generator
+- [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
 
 #### Medium - <font color="green">_String Iteration_, _Lists_</font>
