@@ -49,7 +49,7 @@
 - Card Duel?
 - Dices Even or Odd?
 - BlackJack
-- Halloween Candy
+- [Halloween Candy](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/halloweencandy)
 - Easter Egg Hunt?
 - Dreidel Game
 - Choose Your Own Adventure
