@@ -38,7 +38,7 @@
 ---
 
 - Trivia
-- Are you smarter than a 5th grader
+- [Are you smarter than a 5th grader](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/smarterthan5th)
 - [Lottery Ticket](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/lotteryticket)
 - Math Problem Generator
 - Series of Unfortunate Events
@@ -56,7 +56,7 @@
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
 
-#### Medium - <font color="green">_String Iteration_, _Lists_</font>
+#### Medium - <font color="green">_Strings_ / _Lists_ [indexing and iterations]</font>
 
 ---
 
