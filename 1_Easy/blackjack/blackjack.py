@@ -1,54 +1,63 @@
+# Blackjack
+# Difficulty:⭐
+# Basic recreation of the game BlackJack
+
+# Steps
+# 1. create 2 card variables and assign them random numbers from 1 to 10
+# 2. output the 2 cards and the total of the 2 cards
+
+# 3. ask the user if they would like an extra card and save their answer in a variable
+# 4. if they say yes then generate a new random number from 1 to 10
+# 5. output the running total of the player, need a variable to save the total of the first 2 cards
+
+# 6. start a while True loop to repeat steps 3 - 5
+# 8. stop the loop when the user enters no or total is greater equal to 21
+
+# 9. dealers turn: create 2 card variables and assign them random numbers from 1 to 10
+# 10. the dealer will always hit on 16 and below and player is not busted
+
+# 11. check for who wins
+
 import random
 
-#a player starts with 2 cards in the game of blackjack
-#the value of the card can be 1(A) up to 10(face cards)
 card1 = random.randint(1,10)
 card2 = random.randint(1,10)
-#the player's usually do mental math to calculate the total but we will rely on the computer to calcualte total
 total = card1 + card2
 
 print(card1, card2)
 print("Total:", total)
 
-#continuously ask if they want an additional card
 while True:
   choice = input("do you want a card? ")
-  #if input is yes then generate a random number to represent a random card and add it to the total
   if choice == "yes":
     card3 = random.randint(1,10)
     total = total + card3
     print(card3)
     print("Total:",total)
-  #if input is no then stop the loop to stop asking
   if choice == "no":
     break
+  if total >= 21:
+    break
 
-#after the player is done receiving cards its time for the computer
 card4 = random.randint(1,10)
 card5 = random.randint(1,10)
-computerTotal = card4 + card5
+dealertotal = card4 + card5
 print(card4, card5)
 
-#since the computer grabs card automatically lets implement the rule where the computer will grab cards as long as their total is below 16 (this is true for the dealer in real life as well)
-
-while computerTotal < 16:
+while dealertotal < 16:
   card6 = random.randint(1,10)
   print(card6)
-  computerTotal = computerTotal + card6
+  dealertotal = dealertotal + card6
 
-print("Computer's total:", computerTotal)
+print("dealer's total:", dealertotal)
 
-#now both the player and the computer are done receiving cards its time to check the winner
-#the rule for winning blackjack is who ever is closest to 21 without going over
-if total>computerTotal and total <= 21:
-  print("Player wins")
-elif computerTotal > total and computerTotal <= 21:
-  print("Computer wins")
-elif computerTotal>21 and total > 21:
-  print("Both lose")
-elif computerTotal>21:
-  print("computer loses")
-elif total > 21:
-  print("you lose")
+if total > 21:
+  print("player bust")
+elif dealertotal > 21:
+  print("dealer bust")
+elif dealertotal > total:
+  print("dealer wins")
+elif total > dealertotal:
+  print("player wins")
 else:
   print("tie")

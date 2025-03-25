@@ -1,3 +1,23 @@
+# Are you smarter than a 5th grader
+# Difficulty:⭐
+# A series of questions to check if you are smarter than a 5th grader
+
+# Steps
+# 1. Ask the user a question and allow them to answer
+# 2. Check to see if the user is corrrect or incorrect
+
+# 3. will run into issue with answers like "1000 sqft"
+
+# 4. Repeat with more questions
+
+# 5. will run into issue with answers like "Nitrogen"
+
+# 6. provide questions and answers, allow students to work on more questions on their own
+
+# 7. Create a score variable
+# 8. Keep track of how many correct the user got
+# 9. output if the user is smarter than a 5th grader or not
+
 #Important!!!!!!!!!!!!!!!!!!!
 #Show the students how to do the first two questions which allows you to utilize 'in' and lower() 
 
