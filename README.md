@@ -52,7 +52,7 @@
 - Halloween Candy
 - Easter Egg Hunt?
 - Dreidel Game
-- Choose Your Own Adventure
+- [Choose Your Own Adventure](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/choseadventure)
 - Random Password Generator
 - Word Dictionary
 
