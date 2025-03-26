@@ -51,7 +51,7 @@
 - BlackJack
 - [Halloween Candy](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/halloweencandy)
 - Easter Egg Hunt?
-- Dreidel Game
+- [Dreidel Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dreidel)
 - [Choose Your Own Adventure](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/choseadventure)
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
