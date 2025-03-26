@@ -46,7 +46,7 @@
 - Number Memory Game
 - Higher/Lower Cards
 - Higher/Lower Numbers?
-- Card Duel?
+- [Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/cardduel)
 - Dices Even or Odd?
 - BlackJack
 - [Halloween Candy](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/halloweencandy)
