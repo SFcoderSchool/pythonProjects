@@ -1,3 +1,35 @@
+# Dreidel
+# Difficulty: ⭐
+# Pay a coin and spin the top and 
+# depending on what the top lands on,
+# do the action depending on the rules
+# Lose all your coins and its game over
+
+# Rules
+# Nun - receive nothing
+# Gimel - receive all coins from the table
+# Hay - receive half the coins from the table
+# Shin - put a coin to the table
+
+# Steps
+# 1. give player and computer 10 coins and table should have 0 coins
+
+# 2. both player and computer will pay the coin and put it in the table
+# 3. use input() to pause the script 
+
+# 4. randomly select a number from 1 to 4 for the dreidel
+# 5. output a word from the rules for each possible random number
+
+# 6. depending on the rules, do the action for each word
+
+# 7. use input() to pause the script
+# 8. repeat the dreidel spin for the computer
+
+# 9. output the current amount of coins of player, computer, and table
+
+# 10. add a while True to repeat the game (steps 4 to 9)
+# 11. stop the game when someone has reached 0 or less coins
+
 import random
 #both players start with 10 coins
 player = 10
@@ -19,7 +51,9 @@ while True:
     table = 0
   if dreidel == 3:
     print("hay, you get half the coins on the table")
-    reward = int(table/2)
+    reward = table/2
+    # print(reward)
+    reward = int(reward)
     player = player + reward
     table = table - reward
   if dreidel == 4:

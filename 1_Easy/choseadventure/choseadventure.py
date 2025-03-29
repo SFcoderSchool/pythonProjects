@@ -1,4 +1,17 @@
-import random
+# Choose your own adventure
+# Difficulty: ⭐
+# A text-based choice story. Try to survive till the end.
+
+# Steps
+# 1. output a statement for the background of the story
+# 2. output the first choices the user can pick and allow the to pick
+# 3. check to see what they inputted and output the message depending out their choice
+
+# 4. choose a choice and output the second choices to the user
+# 5. check to see what they inputted and output the message depending out their choice
+
+# 6. mark certain lines as gameover!
+# 7. continue adding more levels
 
 #Create your story behind your project
 print("Your plane crash lands on a deserted island. \n")

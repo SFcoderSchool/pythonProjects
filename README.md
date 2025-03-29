@@ -46,13 +46,13 @@
 - Number Memory Game
 - Higher/Lower Cards
 - Higher/Lower Numbers?
-- Card Duel?
+- [Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/cardduel)
 - Dices Even or Odd?
 - BlackJack
 - [Halloween Candy](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/halloweencandy)
 - Easter Egg Hunt?
-- Dreidel Game
-- Choose Your Own Adventure
+- [Dreidel Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dreidel)
+- [Choose Your Own Adventure](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/choseadventure)
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
 
