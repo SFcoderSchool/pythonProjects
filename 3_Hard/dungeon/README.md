@@ -2,7 +2,7 @@
 
 ## Background
 
-Enter a dungeon as the player and retrieve the goal while avoinding the enemies
+Enter a dungeon as the player and retrieve the goal while avoiding the enemies
 
 ## Steps
 
@@ -15,7 +15,7 @@ Enter a dungeon as the player and retrieve the goal while avoinding the enemies
 ```python
 board = []
 bsize = 10
-space = "_"
+space = "⬜"
 
 for i in range(bsize):
   row = []
@@ -41,7 +41,7 @@ def printBoard():
 ```python
 import random
 
-player = "♙"
+player = "🙂"
 
 prow = random.randint(0,bsize-1)
 pcol = random.randint(0,bsize-1)
@@ -51,28 +51,46 @@ board[prow][pcol] = player
 printBoard()
 ```
 
-10. repeat for the goal and an enemy
+10. repeat for the goal
 
 ```python
-enemy = "♞"
-goal = "♚"
-
-erow = random.randint(0,bsize-1)
-ecol = random.randint(0,bsize-1)
+goal = "🍔"
 
 grow = random.randint(0,bsize-1)
 gcol = random.randint(0,bsize-1)
 
-board[erow][ecol] = enemy
 board[grow][gcol] = goal
+
+printBoard()
+```
+
+11. create a count for the amount of enemies to spawn
+12. create an empty list for enemies rows
+13. create an empty list for enemies columns
+14. add random numbers into the list for however many enemies there are
+15. for all enemies put them onto the board
+
+```python
+enemy = "👿"
+
+erow = []
+ecol = []
+esize = 10
+
+for i in range(esize):
+  erow.append(random.randint(0,bsize-1))
+  ecol.append(random.randint(0,bsize-1))
+
+for i in range(len(ecol)):
+  board[erow[i]][ecol[i]] = enemy
 
 printBoard()
 ```
 
 ### PlayerMovement
 
-11. use readchar.readkey() and check the user input
-12. depending on their input, reset the current position back to blank, move the piece accordingly
+16. use readchar.readkey() and check the user input
+17. depending on their input, reset the current position back to blank, move the piece accordingly
 
 ```python
 import readchar
@@ -89,8 +107,8 @@ if k == "d":
   pcol += 1
 ```
 
-13. NOTE: piece may go out of bounds
-14. add checks to make sure piece does not go out of bounds
+18. NOTE: piece may go out of bounds
+19. add checks to make sure piece does not go out of bounds
 
 ```python
 k = readchar.readkey()
@@ -107,8 +125,8 @@ if k == "d" and pcol != len(board) - 1:
 
 ### Enemy movement
 
-15. generate a random number from 1 to 4
-16. depending on the number, reset the current position back to blank, move the piece accordingly
+20. generate a random number from 1 to 4
+21. depending on the number, reset the current position back to blank, move the piece accordingly
 
 ```python
 board[erow][ecol] = space
@@ -124,8 +142,8 @@ elif rmove==4:
   erow -= 1
 ```
 
-17. NOTE: piece may go out of bounds
-18. add checks to make sure piece does not go out of bounds
+22. NOTE: piece may go out of bounds
+23. add checks to make sure piece does not go out of bounds
 
 ```python
 board[erow][ecol] = space
@@ -143,8 +161,8 @@ elif rmove==4 and erow != 0:
 
 ### Check for game over states
 
-19. check to see if the player coordinates are on the goal coordinates
-20. check to see if the player coordinates are on the enemy coordinates
+24. check to see if the player coordinates are on the goal coordinates
+25. check to see if the player coordinates are on the enemy coordinates
 
 ```python
 if pcol == gcol and prow == grow:
@@ -156,32 +174,37 @@ if pcol == ecol and prow == erow:
 
 ### Simplify
 
-21. NOTE: adding a while True: to the game would be very long and confusing; should make functions
-22. convert the generate game board / pieces into a function
-23. convert the player movement into a function
-24. convert the enemy movement into a function
-25. convert the update characters into a function
-26. convert the logic for loss into a function
-27. convert the logic for win into a function
+26. NOTE: adding a while True: to the game would be very long and confusing; should make functions
+27. convert the generate game board / pieces into a function
+28. convert the player movement into a function
+29. convert the enemy movement into a function
+30. convert the update characters into a function
+31. convert the logic for loss into a function
+32. convert the logic for win into a function
 
 ```python
 def generateBoard():
-	global pcol, prow, ecol, erow, gcol, grow, board
-	board = []
-	for x in range (bsize):
-		row = []
-		for i in range (bsize):
-			row.append(space)
-		board.append(row)
+  global pcol, prow, ecol, erow, gcol, grow, board, esize
+  board = []
+  erow = []
+  ecol = []
+  esize = 10
 
-	prow = random.randint(0,bsize-1)
-	pcol = random.randint(0,bsize-1)
+  for x in range (bsize):
+    row = []
+    for i in range (bsize):
+      row.append(space)
+    board.append(row)
 
-	erow = random.randint(0,bsize-1)
-	ecol = random.randint(0,bsize-1)
+  prow = random.randint(0,bsize-1)
+  pcol = random.randint(0,bsize-1)
 
-	grow = random.randint(0,bsize-1)
-	gcol = random.randint(0,bsize-1)
+  for i in range(esize):
+    erow.append(random.randint(0,bsize-1))
+    ecol.append(random.randint(0,bsize-1))
+
+  grow = random.randint(0,bsize-1)
+  gcol = random.randint(0,bsize-1)
 
 
 def enemyMovement():
@@ -230,8 +253,8 @@ def checkLoss():
 
 ### Final Gane Logic
 
-28. start a while True and repeat the steps for the game
-29. playermovement, enemymovement, drawcharacters
+33. start a while True and repeat the steps for the game
+34. playermovement, enemymovement, drawcharacters
 
 ```python
 generateBoard()
@@ -244,9 +267,9 @@ while True:
   drawCharacters()
 ```
 
-30. if win then generate a new board with new positions
-31. if loss then break the loop and say you lose
-32. clear and print wherever needed
+35. if win then generate a new board with new positions
+36. if loss then break the loop and say you lose
+37. clear and print wherever needed
 
 ```python
 while True:

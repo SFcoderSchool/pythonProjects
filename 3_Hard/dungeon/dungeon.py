@@ -1,6 +1,6 @@
 # Dungeon
 # Difficulty: ⭐⭐⭐⭐
-# Enter a dungeon as the player and retrieve the goal while avoinding the enemies
+# Enter a dungeon as the player and retrieve the goal while avoiding the enemies
 
 # Steps:
 
@@ -17,41 +17,48 @@
 # 8. randomly pick a random col for the player
 # 9. place the player into its randomly chosen place and printBoard to test
 
-# 10. repeat for the goal and an enemy
+# 10. repeat for the goal
+
+# 11. create a count for the amount of enemies to spawn
+# 12. create an empty list for enemies rows
+# 13. create an empty list for enemies columns
+# 14. add random numbers into the list for however many enemies there are
+# 15. for all enemies put them onto the board
 
 # Player movement
-# 11. use readchar.readkey() and check the user input
-# 12. depending on their input, move the piece accordingly
+# 16. use readchar.readkey() and check the user input
+# 17. depending on their input, move the piece accordingly
 
-# 13. NOTE: piece may go out of bounds
-# 14. add checks to make sure piece does not go out of bounds
+# 18. NOTE: piece may go out of bounds
+# 19. add checks to make sure piece does not go out of bounds
 
 # Enemy movement
-# 15. generate a random number from 1 to 4
-# 16. depending on the number, reset the current position back to blank, move the piece accordingly
+# 20. for all enemies
+# 21. generate a random number from 1 to 4
+# 22. depending on the number, reset the current position back to blank, move the piece accordingly
 
-# 17. NOTE: piece may go out of bounds
-# 18. add checks to make sure piece does not go out of bounds
+# 23. NOTE: piece may go out of bounds
+# 24. add checks to make sure piece does not go out of bounds
 
 # Check for game over states 
-# 19. check to see if the player coordinates are on the goal coordinates
-# 20. check to see if the player coordinates are on the enemy coordinates
+# 25. check to see if the player coordinates are on the goal coordinates
+# 26. check to see if the player coordinates are on any of the enemy coordinates
 
 # Simplify
-# 21. NOTE: adding a while True: to the game would be very long and confusing; should make functions
-# 22. convert the generate game board / pieces into a function
-# 23. convert the player movement into a function
-# 24. convert the enemy movement into a function
-# 25. convert the update characters into a function
-# 26. convert the logic for loss into a function
-# 27. convert the logic for win into a function
+# 27. NOTE: adding a while True: to the game would be very long and confusing; should make functions
+# 28. convert the generate game board / pieces into a function
+# 29. convert the player movement into a function
+# 30. convert the enemy movement into a function
+# 31. convert the update characters into a function
+# 32. convert the logic for loss into a function
+# 33. convert the logic for win into a function
 
 # Final Game Logic
-# 28. start a while True and repeat the steps for the game
-# 29. playermovement, enemymovement, drawcharacters
-# 30. if win then generate a new board with new positions
-# 31. if loss then break the loop and say you lose
-# 32. clear and print wherever needed
+# 34. start a while True and repeat the steps for the game
+# 35. playermovement, enemymovement, drawcharacters
+# 36. if win then generate a new board with new positions
+# 37. if loss then break the loop and say you lose
+# 38. clear and print wherever needed
 
 # Bonus
 # 1. update code where a new enemy spawns after each level
@@ -61,38 +68,44 @@ import readchar
 import os
 import random
 
-space = "_"
-player = "♙"
-enemy = "♞"
-goal = "♚"
+space = "⬜"
+player = "🙂"
+enemy = "👿"
+goal = "🍔"
 
 board = []
 bsize = 10
 
 pcol = 0
 prow = 0
+esize = 10
 ecol = []
 erow = []
 gcol = 0
 grow = 0
 
 def generateBoard():
-	global pcol, prow, ecol, erow, gcol, grow, board
-	board = []
-	for x in range (bsize):
-		row = []
-		for i in range (bsize):
-			row.append(space)
-		board.append(row)
-		
-	prow = random.randint(0,bsize-1)
-	pcol = random.randint(0,bsize-1)
+  global pcol, prow, ecol, erow, gcol, grow, board, esize
+  board = []
+  erow = []
+  ecol = []
+  esize = 10
 
-	erow.append(random.randint(0,bsize-1))
-	ecol.append(random.randint(0,bsize-1))
+  for x in range (bsize):
+    row = []
+    for i in range (bsize):
+      row.append(space)
+    board.append(row)
+    
+  prow = random.randint(0,bsize-1)
+  pcol = random.randint(0,bsize-1)
 
-	grow = random.randint(0,bsize-1)
-	gcol = random.randint(0,bsize-1)
+  for i in range(esize):
+    erow.append(random.randint(0,bsize-1))
+    ecol.append(random.randint(0,bsize-1))
+
+  grow = random.randint(0,bsize-1)
+  gcol = random.randint(0,bsize-1)
 
 def printBoard():
 	for i in range(bsize):
@@ -101,17 +114,17 @@ def printBoard():
 def enemyMovement():
 	global erow, ecol
 
-	for i in range(len(ecol)):
+	for i in range(esize):
 		board[erow[i]][ecol[i]] = space
 
 		rmove = random.randint(1,4)
-		if rmove==1 and ecol[i] != len(board) - 1:
+		if rmove==1 and ecol[i] != len(board) - 1 and ecol[i] + 1 != gcol:
 			ecol[i] += 1
-		elif rmove==2 and ecol[i] != 0:
+		elif rmove==2 and ecol[i] != 0 and ecol[i] - 1 != gcol:
 			ecol[i] -= 1
-		elif rmove==3 and erow[i] != len(board) - 1:
+		elif rmove==3 and erow[i] != len(board) - 1 and erow[i] + 1 != grow:
 			erow[i] += 1
-		elif rmove==4 and erow[i] != 0:
+		elif rmove==4 and erow[i] != 0 and erow[i] - 1 != grow:
 			erow[i] -= 1
 
 def playerMovement():
