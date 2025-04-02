@@ -23,13 +23,13 @@ for i in range(10):
     inventory.append(prize)
 
 
-print("Selling all prizes!")
+print("Worth of all prizes!")
 cash = 0
 for i in range(len(inventory)):
     keyName = inventory[i]
     money = itemsDiction[keyName]
-    print(keyName, "sold for", money)
+    print(keyName, "is worth", money)
     cash += money
 
-print("You won this much cash", cash)
+print("Its all worth", cash)
 
