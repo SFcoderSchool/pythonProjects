@@ -99,5 +99,6 @@
 #### Hard - <font color="green">_Functions_, _2D Lists_, _Dictionaries_</font>
 
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
+- [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 
 #### Advanced - <font color="green">_Classes/Objects_</font>
