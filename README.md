@@ -68,7 +68,7 @@
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: List / String iterations
+- <code style="color: #B90000">**Lecture**</code>: List / String iterations
 - Caesar Cipher
 - Hangman
 - Glass Bridge
@@ -79,7 +79,7 @@
 - 5 Card Duel
 - Simon Says
 - Treasure Hunt
-- <a href="https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/bombroulette" target="_blank">Bomb Roulette</a>
+- [Bomb Roulette](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/bombroulette)
 - Emoji Riddle with List
 - Song Quiz with List
 - Bop It
@@ -94,11 +94,12 @@
 - Name Poem
 - Tic Tac Toe
 - Chicken Cross
-- <a href="https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/connectionsList" target="_blank">Connections</a>
+- [Connections](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/connectionsList)
 
 #### Hard - <font color="green">_Functions_, _2D Lists_, _Dictionaries_</font>
 
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
+- [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
 
 #### Advanced - <font color="green">_Classes/Objects_</font>
