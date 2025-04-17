@@ -68,7 +68,7 @@
 
 ---
 
-- <code style="color: #B90000">**Lecture**</code>: List / String iterations
+- <code style="color : #B90000">**Lecture**</code>: List / String iterations
 - Caesar Cipher
 - Hangman
 - Glass Bridge
