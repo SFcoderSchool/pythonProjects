@@ -68,7 +68,7 @@
 
 ---
 
-- <code style="color: #B90000">**Lecture**</code>: List / String iterations
+- <code style="color : #B90000">**Lecture**</code>: List / String iterations
 - Caesar Cipher
 - Hangman
 - Glass Bridge
@@ -101,5 +101,7 @@
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 - [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
+- [USA Capital Quiz](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/usacapitalsquiz)
+- [Card Showdown](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cards)
 
 #### Advanced - <font color="green">_Classes/Objects_</font>
