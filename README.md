@@ -16,28 +16,29 @@
 
 - <font color="#B90000">**Lecture**</font>: [Casting Data](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/castingdata.py)
 - [Dice Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/diceguesser)
-- Dice Roller
-- Dice Stealing
+- [Dice Roller](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/diceroller)
+- [Dice Stealing](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dicestealing)
 - [MadLibs](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/madlibs)
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: Conditionals
-- Fortune Cookie
+- <font color="#B90000">**Lecture**</font>: [Conditionals](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/conditionalslect.py)
+- [Fortune Cookie](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/fortunecookie)
 - [Magic 8 Ball](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/magic8ball)
-- Rock Paper Scissors
-- Emoji Riddle
-- Song Quiz
+- [Rock Paper Scissors](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/rockpaperscissors)
+- [Emoji Riddle](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/emojiriddle)
+- [Song Quiz](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/songquiz)
+- [Running Turtles](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/runningTurtles)
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: For Loops
-- Turtle Shapes
+- <font color="#B90000">**Lecture**</font>: [For Loops](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/forloops.py)
+- [Turtle Shapes](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/turtleshapes)
 - [Random Number Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numberguesser)
 
 ---
 
-- Trivia
+- [Trivia](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/trivia)
 - [Are you smarter than a 5th grader](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/smarterthan5th)
 - [Lottery Ticket](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/lotteryticket)
 - [Math Problem Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/mathproblemgen)
@@ -45,7 +46,7 @@
 - [Series of Fortunate Events?](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/fortunateincidents)
 - [Number Memory Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numbermemory)
 - [Higher/Lower Cards](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/higherOrLower)
-- Higher/Lower Numbers?
+- [Higher/Lower Dices](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/higherlowerdices)
 - [Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/cardduel)
 - [Dices Even or Odd?](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/diceEvenOrOdd)
 - [BlackJack](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/blackjack)
@@ -56,28 +57,30 @@
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
 
+
+
 #### Medium - <font color="green">_Strings_ / _Lists_ [indexing and iterations]</font>
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: Lists
-- Shopping Store
-- Not My Neighbor
-- Avoid The Mine
-- Slot Machine
+- <font color="#B90000">**Lecture**</font>: [Lists](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/Lectures/lists.py)
+- [Shopping Store](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/shoppingstore)
+- [Not My Neighbor](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/notmyneighbor)
+- [Avoid The Mine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/avoidthemine)
+- [Slot Machine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/slotmachine)
 
 ---
 
-- <code style="color : #B90000">**Lecture**</code>: List / String iterations
-- Caesar Cipher
-- Hangman
-- Glass Bridge
-- Word Scramble
+- <code style="color : #B90000">**Lecture**</code>: [List / String iterations](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/Lectures/listiteration.py)
+- [Caesar Cipher](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/caesarcipher)
+- [Hangman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
+- [Glass Bridge](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/glasswalk)
+- [Word Scramble](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/wordscramble)
 
 ---
 
-- 5 Card Duel
-- Simon Says
+- [5 Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/cardduellists)
+- [Simon Says](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/simonsays)
 - Treasure Hunt
 - [Bomb Roulette](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/bombroulette)
 - Emoji Riddle with List
