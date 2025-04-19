@@ -8,14 +8,14 @@
 
 - <font color="#B90000">**Lecture**</font>: [Basic Data Types](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/datatypes.py)
 - <font color="#B90000">**Lecture**</font>: [Variables](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/variables.py)
-- Coin Flip
-- Bit Life
+- [Coin Flip](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/coinflip)
+- [Bit Life](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/bitlife)
 - [Dice Roll](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dicerolleasy) (Easy)
 
 ---
 
-- <font color="#B90000">**Lecture**</font>: Casting Data
-- Dice Guesser
+- <font color="#B90000">**Lecture**</font>: [Casting Data](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/castingdata.py)
+- [Dice Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/diceguesser)
 - Dice Roller
 - Dice Stealing
 - [MadLibs](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/madlibs)
@@ -40,17 +40,17 @@
 - Trivia
 - [Are you smarter than a 5th grader](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/smarterthan5th)
 - [Lottery Ticket](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/lotteryticket)
-- Math Problem Generator
-- Series of Unfortunate Events
-- Series of Fortunate Events?
-- Number Memory Game
-- Higher/Lower Cards
+- [Math Problem Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/mathproblemgen)
+- [Series of Unfortunate Events](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/unfortunateevents)
+- [Series of Fortunate Events?](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/fortunateincidents)
+- [Number Memory Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numbermemory)
+- [Higher/Lower Cards](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/higherOrLower)
 - Higher/Lower Numbers?
 - [Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/cardduel)
-- Dices Even or Odd?
-- BlackJack
+- [Dices Even or Odd?](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/diceEvenOrOdd)
+- [BlackJack](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/blackjack)
 - [Halloween Candy](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/halloweencandy)
-- Easter Egg Hunt?
+- [Easter Egg Hunt?](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/easteregg)
 - [Dreidel Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/dreidel)
 - [Choose Your Own Adventure](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/choseadventure)
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)

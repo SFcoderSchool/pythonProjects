@@ -134,16 +134,16 @@ while True:
 
   print(randomGreeting)
   time.sleep(2)
-  os.system("clear")
+  os.system("clear || cls")
   print(randomConversation)
   time.sleep(2)
-  os.system("clear")
+  os.system("clear || cls")
   print(randomFollowUp)
   time.sleep(2)
-  os.system("clear")
+  os.system("clear || cls")
   print(randomGoodbye)
   time.sleep(2)
-  os.system("clear")
+  os.system("clear || cls")
 
   answer = input("Is this person an imposter?")
   if answer == "yes" and imposter == 1:
@@ -154,7 +154,7 @@ while True:
     print("IMPOSTER GOT YOU!")
     break
   time.sleep(2)
-  os.system("clear")
+  os.system("clear || cls")
 
 #BONUS: add a score variable
 #mathematically make time.sleep lower the more score you get

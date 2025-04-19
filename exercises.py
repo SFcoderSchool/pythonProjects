@@ -87,7 +87,7 @@
 # Write a program that iterates through a list of integers and calculates the sum of all even numbers.
 # Given a list of strings, write a program to count how many words have a length greater than 5.
 # Declare a variable and assign it to a string. Check and see if the string is a palindrome (a word spelled the same way backwards as it is forwards)
-
+# Create an empty list called famouspeople. Using for loop, append, and input, ask the user to input the name of a famous people and append them to the list 10 times.
 
 #7
 # Given a list of numbers and a target number, write a program to find the index of the first occurrence of the target. If the target is not in the list, print "Not found".
@@ -108,6 +108,7 @@
 # Generate a 2d list of 10 rows each with 10 columns of random numbers. Sum up the numbers in a diagonal line starting from index [0][0] to index [9][9]
 # Generate a 2d list of 5 rows each with 5 columns of random numbers. In each row replace a random column's number with -11.
 # Declare two variables, list1 and list2, and assign them to [1,2,3] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from list1 is the key and item from list2 is the value.
+# Declare two variables, fruits and prices, and assign them to ["apple","pears","oranges"] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from fruits is the key and item from prices is the value.
 # Declare an integer called debitcard and assign it to 4253665879515786. Output ”valid” if the values are valid. Use these rules to determine if the debit card number is valid.
 # 1. It must start with a 4, 5, or 6.
 # 2. It must contain exactly 16 digits.
