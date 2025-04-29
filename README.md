@@ -115,7 +115,6 @@
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 - [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
-
 - [Connect4](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connectfour)
 - [Battle Ship](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
 - [Poker Hand Reader](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/pokerhandreader)
