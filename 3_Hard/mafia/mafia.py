@@ -139,7 +139,7 @@ while True:
     print("Its day time.")
     time.sleep(1)
     townSpeak()
-    time.sleep(5)
+    input("press Enter to move on")
     os.system("clear || cls")
     nightTime()
     print("Night",night)
