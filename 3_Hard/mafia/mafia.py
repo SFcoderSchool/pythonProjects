@@ -2,6 +2,8 @@
 #dialogue
 #bad guys can say bad things
 import random
+import time
+import os
 
 #dictionary of mafia roles and their dialogues
 mafia_dialogues = {
@@ -36,43 +38,117 @@ mafia_dialogues = {
 }
 
 
-#getting the keys
-mafia_roles = list(mafia_dialogues.keys())
-
 
 names = ["Ace", "Blaze", "Shadow", "Viper", "Raven", "Whisper", "Echo", "Spike", "Frost", "Nova", "Jinx", "Maverick", "Phoenix", "Storm", "Hunter", "Fox", "Rogue", "Bullet", "Rebel", "Steel", "Dash", "Sparrow", "Ghost", "Blade", "Venom"]
 
 #creating a dictionary of player names and their roles
-players = {}
+townsPeople = {}
+townsPeopleNames = []
 
-for i in range(4):
-    name = names[random.randint(0,len(names)-1)]
-    players[name] = mafia_roles[i]
+def assignPlayerRoles():
+    global townsPeople, townsPeopleNames
+    for i in range(8):
+        name = names[random.randint(0,len(names)-1)]
+        townsPeople[name] = "Townsperson"
+    print(townsPeople) 
+    #getting the list of player names in this town
+    townsPeopleNames = list(townsPeople.keys())
+    #a random player(Townsperson) becomes the doctor
+    doctor = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+    townsPeople[doctor] = "Doctor"
+    #a random player becomes the dective
+    detective = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+    #as long as the player is not a "Townsperson" (they have a different role) pick a new person to be the detective
+    while townsPeople[detective] != "Townsperson":
+        detective = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+    townsPeople[detective] = "Detective"
+    #2 random players become the mafia
+    for i in range(2):
+        mafia = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+        #as long as the player is not a "Townsperson" (they have a different role) pick a new person to be the mafia
+        while townsPeople[mafia] != "Townsperson":
+            mafia = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+        townsPeople[mafia] = "Mafia"
 
-print(players) 
-
-
-player_names = list(players.keys())
-#the first player is always the mafia
-mafia = player_names[0]
-random.shuffle(player_names)
-
-
-for j in range(5):
-    print("Night",j)
-    for i in range(4):
+def townSpeak():
+    for i in range(len(townsPeople)):
         #have every player say a dialogue dependent on their roles
-        n = player_names[i]
-        role = players[n]
+        n = townsPeopleNames[i]
+        role = townsPeople[n]
         dialogues = mafia_dialogues[role]
         print(n + ": " + dialogues[random.randint(0,len(dialogues)-1)])
 
-#guess who the mafia is 
-guess = input("Who is the mafia?")
-if guess == mafia:
-    print("You found the mafia!")
-else:
-    print("Mafia got you.")
+def playerGuess():
+    print(townsPeopleNames)
+    guess = input("Who do you think the mafia is? ")
+    if guess in townsPeopleNames:
+        townsPeopleNames.remove(guess)
+        selected = townsPeople.pop(guess)
+        print(guess+" was the "+selected)
+
+def checkWinner():
+    mafiaCount = 0
+    #count how many mafia members are left
+    for i in range(len(townsPeople)):
+        if townsPeople[townsPeopleNames[i]] == "Mafia":
+            mafiaCount+=1
+    #if no mafia members are left towns people win
+    if mafiaCount == 0:
+        return "TownsPeople"
+    #if ONLY mafia members are left mafia wins
+    elif len(townsPeople) == mafiaCount:
+        return "Mafia"
+    #otherwise no one wins
+    else:
+        return "No One"
+
+def nightTime():
+    global townsPeople, townsPeopleNames
+    print("Everyone goes to sleep.")
+    time.sleep(1)
+    protected = ""
+    killed = ""
+    #check if the Doctor role is still in the dictionary pick a random person to protect
+    if "Doctor" in list(townsPeople.values()):
+        protected = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+    #if there are still Mafia memebers pick a random person to kill off
+    if "Mafia" in list(townsPeople.values()):
+        killed = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+    #if doctor did not protect this person kill them off
+    if protected != killed:
+        print("Mafia killed " +killed)
+        townsPeopleNames.remove(killed)
+        selected = townsPeople.pop(killed)
+        print(killed+" was the "+selected)
+    else:
+        print("The doctor protected " + protected)
+    if "Detective" in townsPeople:
+        investigate = townsPeopleNames[random.randint(0,len(townsPeopleNames)-1)]
+        if townsPeople[investigate] == "Mafia":
+            print(investigate + " is a Mafia member.")
+        else:
+            print(investigate + " is not a Mafia member.")
 
 
-#multiple choice quiz instead
+
+assignPlayerRoles()
+
+
+night = 1
+while True:
+    print("Its day time.")
+    time.sleep(1)
+    townSpeak()
+    time.sleep(5)
+    os.system("clear || cls")
+    nightTime()
+    print("Night",night)
+    playerGuess()
+    final = checkWinner()
+    if final == "Mafia":
+        print("Mafia Wins!")
+        break
+    if final == "TownsPeople":
+        print("Towns People win")
+        break
+    night += 1
