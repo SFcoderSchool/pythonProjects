@@ -57,8 +57,6 @@
 - [Random Password Generator](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/passwordgen)
 - Word Dictionary
 
-
-
 #### Medium - <font color="green">_Strings_ / _Lists_ [indexing and iterations]</font>
 
 ---
@@ -109,6 +107,7 @@
 - [Math Wordle](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathwordle)
 
 ---
+
 - <code style="color : #B90000">**Lecture**</code>: [Nested List](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/nestedlistcreation)
 - [Monkey Search](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/monkeysearch)
 - [tictactoe](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/tictactoe)
@@ -116,12 +115,12 @@
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 - [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
-
 - [Connect4](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connectfour)
 - [Battle Ship](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
 - [Poker Hand Reader](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/pokerhandreader)
 
 ---
+
 - <code style="color : #B90000">**Lecture**</code>: [Dictionaries](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/introtodictionaries)
 - [USA Capital Quiz](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/usacapitalsquiz)
 - [Lootboxes](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/lootboxes)
@@ -132,3 +131,5 @@
 - [Connections](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connections)
 - [Mafia](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mafia)
 #### Advanced - <font color="green">_Classes/Objects_</font>
+
+---
