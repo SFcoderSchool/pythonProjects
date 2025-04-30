@@ -161,7 +161,7 @@ def checkLoss():
 
 generateBoard()
 drawCharacters()
-os.system("clear")
+os.system("clear || cls")
 
 while True:
 	printBoard()
@@ -174,7 +174,7 @@ while True:
 		generateBoard()
 		drawCharacters()
 
-	os.system("clear")
+	os.system("clear || cls")
 	if checkLoss():
 		print("You lose")
 		break	

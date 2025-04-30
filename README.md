@@ -129,7 +129,7 @@
 - [Deck of Cards](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cards)
 - [Card Showdown](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cards)
 - [Connections](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connections)
-
+- [Mafia](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mafia)
 #### Advanced - <font color="green">_Classes/Objects_</font>
 
 ---

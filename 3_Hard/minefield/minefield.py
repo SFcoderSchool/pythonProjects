@@ -90,7 +90,7 @@ while True:
     col=2
     row=9
     dirtgrid[row][col] = player
-  os.system("clear")
+  os.system("clear || cls")
   printGrid(dirtgrid)
   if row == 0:
     print("YOU WIN!")
