@@ -37,7 +37,7 @@ random.shuffle(words)
 for i in range(len(words)):
   if i %4==0 and i !=0:
     print(" ")
-    print(words[i],end=" |")
+  print(words[i],end=" |")
 print()
 ```
 
