@@ -1,3 +1,12 @@
+# Monkey Search
+# Difficulty:
+# find the monkey that is different in the grid
+
+# Steps:
+# 1. get the monkey emoji and save it in a variable, get the different monkey emoji and save it in a different variable
+# 2. create the board and fill it with a 10x10 grid of monkeys
+
+
 #1 get the emojis and store in a easy to use variable. (easier than copy and paste)
 #2 setup board
 #example explained: grab a empty box > fill with items > move box to cargo truck
@@ -13,30 +22,29 @@ import time #allow timer
 find = "🐵"
 hide = "🙊"
 
-board = [] #truck
-for i in range(10): #10 total boxes
-  temp = [] #box
-  for j in range(10): #fill 10 items in box
+board = [] 
+for i in range(10): 
+  temp = [] 
+  for j in range(10): 
     temp.append(hide)
-  board.append(temp) #load filled box in truck
+  board.append(temp) 
 
-#random column and row
 randcolumn = random.randint(0,9)
 randrow = random.randint(0,9)
-#place monkey in a random place
+
 board[randrow][randcolumn] = find
 
 for i in range(10):
   print("".join(board[i]))
 
-start = time.time() #start time
+start = time.time()
 column = int(input("column: "))
 row = int(input("row: "))
-stop = time.time() #end time
+stop = time.time()
 
 if column == randcolumn+1 and row == randrow+1:
   print("correct!")
-  print( round(stop-start,2) ) #how much time it took you
+  print( round(stop-start,2) )
 else: 
   print("wrong")
 
