@@ -1,10 +1,24 @@
-import random
+# RockPaperScissors
+# Difficulty:
+# simulates rock paper scissors against the computer
 
-#1) ask player to pick a move
-#2) roll a random number to represent the move the player use against you
-#3) check who wins with if statements
-#4) look it so the game can be played forever
-#bonus: keep track of score, game ends when first to reach 3 points
+# Steps:
+# 1. identify that the computer will represent 1 as rock, 2 as paper, 3 as scissors
+# 2. generate a random number from 1 to 3 
+# 3. depending on the number, output rock, paper, or scissors
+
+# 4. ask the user to enter in a number 1 to 3 depending on the what they would like to choose
+
+# 5. check to see if the user typed in "1" and the computer chose 1, output tie
+# 6. repeat for all of the situations when the user types in "1"
+
+# 7. repeat for all other situations and output tie, win, loss accordingly
+
+# Bonus:
+# 1. add a repeat and keep track of how many wins you get
+# 2. stop the game when points have reached 3 or -3
+
+import random
 
 points = 0
 while True:

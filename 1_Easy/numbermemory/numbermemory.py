@@ -1,34 +1,27 @@
-# **import clear function first since it takes a few minutes**
+# Number Memory Game
+# Difficulty:
+# Game similar to simon says using numbers instead of colors
 
-# 1 Create a variable and store a empty string 
+# Steps:
+# 1. generate a random number and ask the user to guess the number and check to see if correct
 
-#2 import random library and using randint to generate a single digit 0-9
+# 2. NOTE: need a way to remember previous numbers, store as a String
+# 3. create a variable to store all previously generated numbers 
+# 4. make sure to convert the random integer to a string
+# 5. output the variable
 
-#3 add random digit into the empty string. convert random digit into string type
+# 6. add a wait for about 1 second
+# 7. clear the console
+# 8. update the input to ask the user to guess the entire string
+# 9. update the check to if the user guessed the entire string correctly
 
-#4 print number
+# 10. add a loop to repeat the game forever
+# 11. stop the loop when the user guesses incorrectly
 
-#5 import time library and using the sleep function, wait 1 second
-
-#6 clear the screen using the clear() before the user guesses
-
-#7 allow user to guess. 
-
-#8 Write a while loop to allow user to continue playing as long as the number and your memory matches
-
-
-#9 Score
-
-#bonus: Allow user to increase sleep time by 1 second for every 5 digits. use //
-
-#bonus: start game with 4 random values in string 
-
-#bonus: add numbers to string 2 at a time
-# 24
-# 2468
-# 246827
-
-
+# Bonus:
+# 1. add a scoring system to keep track how far the user gets
+# 2. start the game with already 4 random digits
+# 3. update time to pause scaling with the score
 
 import random
 import os
@@ -38,16 +31,23 @@ number = ""
 memory = ""
 
 
-while number == memory:
+while True:
   addnum = random.randint(0,9)
-  number = number + str(addnum)
+  addnum = str(addnum)
+  number = number + addnum
+
   print("number:",number)
   time.sleep(1+(score//5))
-  os.system("cls")
+  os.system("clear")
+
   memory = input("whats the number? ")
-  if memory == number:
+  if number == memory:
     score = score + 1
-  os.system("cls")
+  os.system("clear")
+
+  if number != memory:
+    break
+
 print("game over! score:",score)
 
 
