@@ -1,24 +1,22 @@
-#1 Create 2 variables and store integers in them
+# Math equation generator
+# Difficulty:
+# Generate math equations and ask the user to solve the equation
 
-#2 Generate an addition math problem with the 2 values
+# Steps:
+# 1. Create 2 variables and save a number in each variable
+# 2. output a string equation using the variables as the numbers
 
-#3 Allow user to answer the math problem
+# 3. ask the user to solve the equation
+# 4. check to see if the user is correct
+# 5. NOTE: make sure to cast the data to match properly
 
-#4 Check answer to see if correct. input > str to int
-#if incorrect, print the answer
+# 6. replace the numbers with random numbers
 
-#5 randomize the 2 numbers
+# 7. repeat with subtraction, multiplication
 
-#6 loop for 10 problems
-
-#7 total correct
-
-#Bonus: include subtraction
-
-#Bonus: inlude multiplication
-#max out number at 30
-
-#Bonus: include division only if the group is comfortable with float type and round()0
+# Bonus:
+# 1. add a loop to repeat 10 times
+# 2. set random number to select the type of equation seperately
 
 import random
 
@@ -26,14 +24,15 @@ score = 0
 problemnum = 1
 
 for i in range(10):
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
+    number1 = random.randint(1, 30)
+    number2 = random.randint(1, 30)
 
     operator = random.randint(1, 4)
     #addition
     if operator == 1:
         question = str(problemnum) + ". " + str(number1) + "+" + str(number2) + "="
-        answer = int(input(question))
+        answer = input(question)
+        answer = int(answer)
         if answer == number1 + number2:
            print("correct")
            score = score + 1
@@ -43,7 +42,8 @@ for i in range(10):
     #subtraction
     elif operator == 2:
         question = str(problemnum) + ". " + str(number1) + "-" + str(number2) + "="
-        answer = int(input(question))
+        answer = input(question)
+        answer = int(answer)
         if answer == number1 - number2:
             print("correct")
             score = score + 1
@@ -52,11 +52,9 @@ for i in range(10):
 
     #multiplication
     elif operator == 3:
-        #change numbers to make problem easier :)
-        number1 = random.randint(1, 30)
-        number2 = random.randint(1, 30)
         question = str(problemnum) + ". " + str(number1) + "*" + str(number2) + "="
-        answer = int(input(question))
+        answer = input(question)
+        answer = int(answer)
         if answer == number1 * number2:
             print("correct")
             score = score + 1
@@ -65,11 +63,9 @@ for i in range(10):
 
     #division
     elif operator == 4:
-        number1 = random.randint(1, 30)
-        number2 = random.randint(1, 30)
         question = str(problemnum) + ". " + str(number1) + "/" + str(number2) + "="
-        #make sure to change to float type and limit to 2 decimal point
-        answer = float(input(question))
+        answer = input(question)
+        answer = float(answer)
         if answer == round(number1 / number2, 2):
             print("correct")
             score = score + 1

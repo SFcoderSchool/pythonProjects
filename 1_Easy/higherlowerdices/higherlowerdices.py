@@ -1,3 +1,25 @@
+# Higher or Lower Dices
+# Difficulty:
+# roll 3 dices for the player and computer, guess if you have the higher total or lower total
+
+# Steps:
+# 1. generate 3 random numbers from 1 to 6 to simulate 3 dice rolls for the player
+# 2. output the 3 dices
+# 3. add up all 3 dices and save the total into a variable
+
+# 4. generate 3 more random numbers from 1 to 6 to sumulate 3 dice rolls for the computer
+# 5. output the 3 dices
+# 6. add up all 3 dices and tabe the total into a variable
+
+# 7. ask the user to guess if their total is higher than the computer's total
+# 8. check to see if their guess was correct or not
+
+# 9. turn off the cheats and add a loop to the game
+# 10. add a score variable into the game
+# 11. output the score inside the loop
+# 12. increment / decrement the score where you win or lose
+
+
 import random
 
 score = 0
@@ -14,11 +36,9 @@ while True:
   cdice3 = random.randint(1,6)
   computertotal = cdice1 + cdice2 + cdice3
   
-  #decide who wins
   choice = input("who wins, higher or lower?")
   print("Computer dices:", cdice1, cdice2, cdice3)
   
-  #the person with the higher total wins
   if choice == "higher":
     if playertotal > computertotal:
       print("you win")
@@ -26,8 +46,7 @@ while True:
     else:
       print("you lose")
       score = score - 1
-  
-  #the person with the lower total wins
+
   if choice == "lower":
     if playertotal < computertotal:
       print("you win")

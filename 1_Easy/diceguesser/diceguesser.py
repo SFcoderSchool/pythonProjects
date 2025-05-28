@@ -1,27 +1,25 @@
-#1 ROLL THE DIE
+# Dice Guesser
+# Difficulty:
+# roll a dice and guess the roll
 
-# import random
-# dice = random.randint(1,6)
+# Steps:
+# 1. generate a random number from 1 to 6 to simulate a dice roll
+# 2. output the dice roll for now
 
+# 3. ask the user to guess
+# 4. check to see if the user guessed correctly
+# 5. NOTE: guess needs to be casted to an int
 
-#2 GUESS THE ROLL
-
-# import random
-# dice = random.randint(1,6)
-# guess = int(input("guess the die: ")) #make sure to cover inputs are string types
-# if dice == guess:
-#   print("you guessed right")
-# else: #if you need more if statement practice use dice != guess
-#   print("you guessed wrong")
-
-
-#3 10 GUESSES AND TRACK THE CORRECT GUESSES
+# Bonus:
+# 1. repeat the game 10 times and keep track of how many correct guesses
 
 import random
 score = 0
 for i in range(10):
   dice = random.randint(1,6)
-  guess = int(input("guess the die: "))
+  # print("The dice rolled:", dice)
+  guess = input("guess the die: ")
+  guess = int(guess)
   if dice == guess:
     print("you guessed right")
     score = score + 1

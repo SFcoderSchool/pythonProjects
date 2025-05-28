@@ -1,17 +1,52 @@
-#1 Build board
+# tic tac toe
+# Difficulty:
+# general game of tic tac toe
 
-board = [] #main board
-temp = [] #list of 3 numbers to insert into board
-for i in range(1,10): #generate numbers 1-9
-  temp.append(i) #adds number into temp list
-  if i%3 == 0: #if 3 6 or 9
-    board.append(temp) #take completed list of 3 values and move into board
-    temp = [] #clear temp list for 3 new numbers
+# Steps:
+# 1. start with an empty list to represent the board
+# 2. GOAL: add numbers 1 through 9 with every 3 numbers in seperate lists
+# 3. create a temporary list
+# 4. start a for loop to count from 1 to 9
+# 5. add the number into the temp list
 
-####################################################################
+# 6. NOTE: every 3 numbers added, the number is divisible by 3
+# 7. check to see if the number is divisible by 3
+# 8. if it is then append the temp list into the board list
+# 9. reset the temp list by assigning it to an empty list
 
-#2 Build function to display board, because data are integers, you cannot use "".join()
-#good idea to keep as integer to get better understanding on data relations
+# 10. output the board by going through the entire nested list
+# 11. update the end value to " " so that a new line only generates after each 3 number
+# 12. NOTE: will have to use this later, so TEST and then convert to a function
+
+# 13. ask the user to pick out a spot with an inputted number
+# 14. find that spot that matches the number and replace it with an "X"
+
+# 15. create a turn variable 
+# 16. update code to replace the chosen spot with "X" or "O" depending on the turn variable
+
+# 17. NOTE: will use this later, convert to a function
+# 18. set the turn as a parameter
+
+# 19. start the game with a for loop that repeats 9 times
+# 20. utilize the functions created before and play the game
+
+# 21. start with checking for a win horizontally, check all rows to see if there is a match
+# 22. when there is a win stop the outer loop
+# 23. NOTE: can only break out of the loop that checks each row
+# 24. convert this to a function and utilize return
+
+# 25. add vertical checks and the diagonal checks
+
+
+
+board = [] 
+temp = [] 
+for i in range(1,10): 
+  temp.append(i) 
+  if i%3 == 0: 
+    board.append(temp) 
+    temp = [] 
+
 def printBoard():
   for row in range(3): 
     for col in range(3):
@@ -19,57 +54,12 @@ def printBoard():
     print()
 printBoard()
 
-####################################################################
-
-#3 Allow user to pick a number. Reminder: numbers on board are integers
-# choice = int(input("choose a position: "))
-
-####################################################################
-
-#4 build a function to switch chosen position into "X"
-# def updateBoard():
-#   for row in range(3): 
-#     for col in range(3):
-#      if board[row][col] == choice:
-#        board[row][col] = "X"
-#   printBoard()
-
-####################################################################
-
-#5 setup loop for up to 9 turns
-# for turn in range(9):
-#   choice = int(input("choose a position: "))
-#   updateBoard()
-  #Why do i only have "X"??
-
-####################################################################
-
-#6 update updateBoard function to take in turn parameter to decide if change should be X or O
-# def updateBoard(turn):
-#   for row in range(3): 
-#     for col in range(3):
-#       if board[row][col] == choice:
-#         if turn%2 == 0: #odd vs even turn
-#           board[row][col] = "X"
-#         else:
-#           board[row][col] = "O"
-#   printBoard()
-
-# for turn in range(9):
-#   choice = int(input("choose a position: "))
-#   updateBoard(turn)
-
-####################################################################
-
-#7 build functions to check for winner
-#VERTICAL 147 259 369
-
 
 def updateBoard(turn):
   for row in range(3): 
     for col in range(3):
       if board[row][col] == choice:
-        if turn%2 == 0: #odd vs even turn
+        if turn%2 == 0: 
           board[row][col] = "X"
         else:
           board[row][col] = "O"

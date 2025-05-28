@@ -1,30 +1,34 @@
-#1 randomly choose a event from 4 options using if statements and random number
+# A series of unfortunate events
+# Difficulty:
+# start with some health and experience a series of unfortunate events and see if you survive
 
-#2 each even will affect health in positive or negative way
+# Steps:
+# 1. output 4 events
 
-#3 if player survives first incident, then proceed to next incident
+# 2. generate a random number from 1 to 4
+# 3. update code to output an event per each number
 
-#4 display health for every round. Health should not exceed 100.
+# 4. create a hp variable to keep track of hp
+# 5. for each event, change the amount of hp they would lose
 
-#5 use time library to slow down the display of incidents
+# 6. display the health after this series of events has finished and move on to the next series
 
-#Bonus: Use list and functions to build this program
+# 7. check to see if the user has died, if they have not then run the next series otherwise game over
+# 8. rinse and repeat 1 more time with new events
+
+# 9. finally check to see if the user survived till the end
+
+
+# Bonus: 
+# 1. add more events
+# 2. Use list and functions to build this program
+# 3. add time to pause after each event series
 
 
 import random
 import time
 
-
 hp = 100
-
-
-#series 1
-#each series will do the following
-#1 random chance of event
-#2 update health accordingly
-#3 do not let health exceed 100
-#4 display health
-#5 wait so user can read before next event
 
 chance = random.randint(1,4)
 if chance == 1:
