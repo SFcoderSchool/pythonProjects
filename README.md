@@ -64,6 +64,7 @@
 - <font color="#B90000">**Lecture**</font>: [Lists](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/Lectures/lists.py)
 - [Shopping Store](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/shoppingstore)
 - [Not My Neighbor](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/notmyneighbor)
+- Amongus
 - [Avoid The Mine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/avoidthemine)
 - [Slot Machine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/slotmachine)
 
@@ -105,7 +106,7 @@
 - [Card Duel w/ Functions](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cardduel)
 - [Math Problems](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathproblems)
 - [Math Wordle](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathwordle)
-
+- Go Fish
 ---
 
 - <code style="color : #B90000">**Lecture**</code>: [Nested List](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/nestedlistcreation)
@@ -113,10 +114,15 @@
 - [tictactoe](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/tictactoe)
 - [Glass Walk](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/glasswalk2d)
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
+- Minecraft
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
+- Maze
 - [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
+- EmojiMatching
 - [Connect4](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connectfour)
+- Connect5
 - [Battle Ship](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
+- Ladders
 - [Poker Hand Reader](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/pokerhandreader)
 
 ---
