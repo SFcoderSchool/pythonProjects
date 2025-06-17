@@ -1,4 +1,4 @@
-# Higher or Lower Dices <br> ⭐★★★★★★★★★
+# Math Problem Generator <br> ⭐★★★★★★★★★
 
 ## Background
 
