@@ -107,6 +107,7 @@
 # Write a function which takes in a string in camel case and converts it into snake case.
 # Generate a 2d list of 10 rows each with 10 columns of random numbers. Sum up the numbers in a diagonal line starting from index [0][0] to index [9][9]
 # Generate a 2d list of 5 rows each with 5 columns of random numbers. In each row replace a random column's number with -11.
+# Generate a 2d list of 10 rows each with 10 rcolumns of random numbers. Pick a random row and column and print out the number at that index. Then print the adjacent numbers.
 # Declare two variables, list1 and list2, and assign them to [1,2,3] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from list1 is the key and item from list2 is the value.
 # Declare two variables, fruits and prices, and assign them to ["apple","pears","oranges"] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from fruits is the key and item from prices is the value.
 # Declare an integer called debitcard and assign it to 4253665879515786. Output ”valid” if the values are valid. Use these rules to determine if the debit card number is valid.

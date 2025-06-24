@@ -67,14 +67,15 @@
 - Amongus
 - [Avoid The Mine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/avoidthemine)
 - [Slot Machine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/slotmachine)
+- [Bingo](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/bingo)
+- [Word Scramble](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/wordscramble)
 
 ---
 
 - <code style="color : #B90000">**Lecture**</code>: [List / String iterations](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/Lectures/listiteration.py)
 - [Caesar Cipher](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/caesarcipher)
-- [Hangman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
 - [Glass Bridge](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/glasswalk)
-- [Word Scramble](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/wordscramble)
+- [Hangman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
 
 ---
 
