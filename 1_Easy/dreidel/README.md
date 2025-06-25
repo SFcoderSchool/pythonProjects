@@ -48,11 +48,11 @@ import random
 dreidel = random.randint(1,4)
 if dreidel == 1:
   print("Nun")
-if dreidel == 2:
+elif dreidel == 2:
   print("Gimel")
-if dreidel == 3:
+elif dreidel == 3:
   print("Hay")
-if dreidel == 4:
+elif dreidel == 4:
   print("Shin")
 ```
 
@@ -63,12 +63,12 @@ if dreidel == 4:
 if dreidel == 1:
   print("Nun")
   print("Do nothing")
-if dreidel == 2:
+elif dreidel == 2:
   print("Gimel")
   print("Receive all coins from the table")
   player = player + table
   table = 0
-if dreidel == 3:
+elif dreidel == 3:
   print("Hay")
   print("Receive half of the coins from the table")
   reward = table / 2
@@ -76,7 +76,7 @@ if dreidel == 3:
   reward = int(reward)
   player = player + reward
   table = table - reward
-if dreidel == 4:
+elif dreidel == 4:
   print("Shin")
   print("Lose a coin, and put in to table")
   player = player - 1
@@ -90,23 +90,22 @@ if dreidel == 4:
 input("Computer's turn to spin the dreidel!")
 
 dreidel = random.randint(1,4)
-  if dreidel == 1:
-    print("nun, computer get nothing")
-  if dreidel == 2:
-    print("gimel, computer get all coins on table")
-    computer = computer + table
-    table = 0
-  if dreidel == 3:
-    print("hay, computer get half the coins on the table")
-    reward = table/2
-    # print(reward)
-    reward = int(reward)
-    computer = computer + reward
-    table = table - reward
-  if dreidel == 4:
-    print("shin, computer lose 1 coin")
-    computer = computer - 1
-    table = table + 1
+if dreidel == 1:
+  print("nun, computer get nothing")
+elif dreidel == 2:
+  print("gimel, computer get all coins on table")
+  computer = computer + table
+  table = 0
+elif dreidel == 3:
+  print("hay, computer get half the coins on the table")
+  reward = table/2
+  reward = int(reward)
+  computer = computer + reward
+  table = table - reward
+elif dreidel == 4:
+  print("shin, computer lose 1 coin")
+  computer = computer - 1
+  table = table + 1
 ```
 
 9. output the current amount of coins of player, computer, and table
@@ -126,6 +125,6 @@ while True:
 
   if player <= 0:
     break
-  if computer <= 0:
+  elif computer <= 0:
     break
 ```

@@ -1,4 +1,5 @@
 import random
+import time
 
 # Based on the hit game "buckshot roulette" a 2 player russian roulette game!
 # 1: generate a list of bombs either a dud or a real bomb
@@ -70,6 +71,9 @@ while playerlives>0 and computerlives>0:
       print("you threw a dud at the computer, computer gains a life")
       computerlives = computerlives + 1
 
+  time.sleep(1)
+
+  print("Computer's turn")
   hand = bombs.pop(0)
   choice = random.randint(1,2)
   if hand == "bomb":
@@ -77,7 +81,7 @@ while playerlives>0 and computerlives>0:
     if choice == 1:
       print("computer threw a bomb at itself, lose a life")
       computerlives = computerlives - 1
-    if choice == "computer":
+    if choice == 2:
       print("computer threw a bomb at you, you lose a life")
       playerlives = playerlives - 1
   else:

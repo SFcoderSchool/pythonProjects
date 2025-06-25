@@ -72,6 +72,7 @@ else:
 13. make chosen targets gain a life if it is a "dud"
 
 ```python
+print("computer's turn")
 hand = bombs.pop(0)
 choice = random.randint(1,2)
 
@@ -80,7 +81,7 @@ if hand == "bomb":
   if choice == 1:
     print("computer threw a bomb at itself, lose a life")
     computerlives = computerlives - 1
-  if choice == "computer":
+  if choice == 2:
     print("computer threw a bomb at you, you lose a life")
     playerlives = playerlives - 1
 else:
@@ -126,6 +127,7 @@ while True:
   else:
     print("it was a dud")
 
+  print("computer's turn")
   hand = bombs.pop(0)
   choice = random.randint(1,2)
 
@@ -134,7 +136,7 @@ while True:
     if choice == 1:
       print("computer threw a bomb at itself, lose a life")
       computerlives = computerlives - 1
-    if choice == "computer":
+    if choice == 2:
       print("computer threw a bomb at you, you lose a life")
       playerlives = playerlives - 1
   else:
@@ -158,3 +160,5 @@ while True:
 ```python
 while playerlives>0 and computerlives>0:
 ```
+
+2. add delays to
