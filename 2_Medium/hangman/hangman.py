@@ -1,35 +1,53 @@
+# Hangman
+# guess a letter until you guess the word or fail too many times
+
+# Steps
+# 1. create the word and store it in a variable
+
+# 2. create an empty blanks list and fill it with underscores
+# 3. output the blanks list
+
+# 4. ask the user to guess a letter
+# 5. go through the word and check to see if the letter guessed matches any letters in the word
+# 6. if it does then set the "_" to the letter in that position
+
+# 7. create a mistakes counter and a variable change to remember if the code entered the correct if statement
+# 8. if there was no change to the change variable then the user got it wrong
+# 9. otherwise the user was correct
+
+# 10. add a while True loop to repeat the game
+# 11. add condition to stop the game
+# 12. stop the game when mistakes reaches 6 or when the blanks joined together equals the word
+
+# Bonus
+# 1. add hangman ascii art from google
+# 2. add a word bank and randomly select a word
+
 import random
 import os
 
 
-
 mistakes = 0
-# create variable and store a string > make a list and randomly choose a word
 word = "bottle"
 
-#create empty list to hold "_" based on how many letters you have
 blank = []
 for i in range(len(word)):
   blank.append("_")
 
-1#access hangman ascii art (google hangman ascii)
+
 print(" ".join(blank))
 
 
-
-
-# play as long as mistakes less than 6 or solved
 while mistakes<6 and word != "".join(blank):
 
-  guess = input() # user guess a letter
+  guess = input() 
   change = False
-  #check if any of the words letter is same as guess. If match, then switch blank's index position to guessed letter.
+
   for i in range(len(word)):
     if word[i] == guess:
       blank[i] = guess
       change = True
       
-  #separate condition to check if any changes were made. If no changes were made, increase mistakes count by 1.
   if change == False:
     mistakes = mistakes + 1
   os.system("clear")

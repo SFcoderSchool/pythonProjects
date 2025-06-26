@@ -161,4 +161,4 @@ while True:
 while playerlives>0 and computerlives>0:
 ```
 
-2. add delays to
+2. add delays to slow down the turn transitions

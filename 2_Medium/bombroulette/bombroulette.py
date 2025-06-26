@@ -33,6 +33,7 @@ import time
 # 16. include a condition to stop the game when either computer or player run out of lives
 
 # bonus 1: update code to stop the while loop with a condition
+# bonus 2: add delays to slow down the turn transitions
 
 
 
