@@ -1,3 +1,27 @@
+# Wordle
+# Copy of the popular nytimes game Wordle
+# NOTE: will be using colored(text, color) to color the text https://pypi.org/project/termcolor/
+
+# Steps
+# 1. start with a word and store it in a variable
+
+# 2. ask the user to guess a 5 letter word
+
+# 3. go through all the letters in the guess and see if it matches with the letters in the answer and output green
+# 4. as you go through if they do not match, but exist in the word output yellow
+# 5. if letter does not exist in the answer then output white
+
+# 6. instead of outputting the colors, save the colors in a list for each letter
+# 7. go through the list of colors and letters of the guessed word
+# 8. output the letter with its corresponding color using the colored() function
+
+# 9. add a loop to repeat 6 times
+# 10. stop early if the user guesses the word correctly
+# 11. output the answer when the loop ends
+
+# Bonus
+# 1. add a word bank and select a random word to be the chosen word
+
 
 from termcolor import colored
 import os
@@ -13,23 +37,12 @@ words=["money","bread","hello","kwami","babys","dinos","pizza","apple","dance","
 word=words[random.randint(0,len(words))]
 
 
-
-
-
-#build word bank for guesses
-#read those guesses each turn and read colors each turn
-
-#replaced in line 30 after or to test: ''.join(guesses).find(guess) != -1)
-
 nomatch="white"
 match="yellow"
 correct = "green"
 guesses=[]
 
-#loop for each turn the player guesses
 for turns in range(6):
-  
-  #make list of colors for letters all white
   colors=[] 
   for i in range(5):
     colors.append(nomatch) 
@@ -43,11 +56,11 @@ for turns in range(6):
   for i in range(5):
     if word[i]==guess[i]:
       colors[i]=correct
-    elif word.find(guess[i])>=0:
+    elif guess[i] in word:
       colors[i]=match
   
   for i in range(5):  
-    print(colored(guess[i],colors[i]),end="") #print out the word with colored letters
+    print(colored(guess[i],colors[i]),end="")
   print() 
   if guess==word:
     print("good job")

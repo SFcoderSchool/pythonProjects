@@ -1,38 +1,50 @@
+# Glass Bridge
+# Based off of the squid game / mr.beast bridge game
+# Create a list of valid sides for the user to walk on; either left or right. See how far the user can travel without guessing wrong.
+# restart again when the user guesses wrong and falls off
+
+# Steps
+# 1. create an empty list called glassBridge
+# 2. fill the list with 10 coin flips for "left" or "right"
+
+# 3. ask the user to pick left and right
+# 4. check to see if the first choice in the bridge matches with their guess
+# 5. if it did then say "congrats", if not then say "failed"
+
+# 6. track the position on the bridge with a variable called rowNum
+# 7. replace the index in the list to use rowNum instead of just index 0
+
+# 8. add a while True loop and repeat
+# 9. increment the rowNum if they got it correct
+# 10. set back to 0 if they got it incorrect
+
+# 11. stop the game when they reach the end
+
 import random
 
-#this is similar to the squid game/mr. beast's glass walking game
-#there is a left and right glass
-#one side is weak glass and you will fall
-#falling will make you start from the beginning again
-#the other side will be strong glass and you get to move forward
 
-
-#generating a list of correct answers
-glassRoad = []
+glassBridge = []
 for i in range(10):
   coin = random.randint(1,2)
   if coin == 1:
-    glassRoad.append("left")
+    glassBridge.append("left")
   else:
-    glassRoad.append("right")
+    glassBridge.append("right")
 
 
-#start a row number 0, the first pair of glass
 rowNum = 0
 while True:
   print("row:",rowNum,"🪟 🪟 ")
   choice = input("left or right glass?")
-  #looking up the answer key for the row number
-  #if the answer for the list index at rowNum matches your choice
-  #you get to move forward
-  if glassRoad[rowNum] == choice:
+
+  if glassBridge[rowNum] == choice:
     print("CONGRATZ you move forward to the next row! 🔝")
     rowNum = rowNum + 1
   else:
     print("OH NO THE GLASS WAS FAKE YOU FELL OFF 🧗")
     print("start from the beginning again")
     rowNum = 0
-  #if reached the end then stop the game you win!
+
   if rowNum == 10:
     print("You reached the end! you win!")
     break
