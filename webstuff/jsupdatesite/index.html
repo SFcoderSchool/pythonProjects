@@ -1,0 +1,51 @@
+<!-- 
+Instructions: 
+
+1. Setup the website to take in inputs and use buttons
+2. make functions to do instructions when buttons pressed
+2. Add basic stylings
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family: Arial;
+      }
+      label {
+        font-weight: light;
+      }
+      button {
+        color: white;
+        background-color: blue;
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome to this interactive page!</h1>
+    <label for="firstname">Enter your first name</label>
+    <input name="firstname" id="firstname" />
+    <br />
+    <label for="lastname">Enter your last name</label>
+    <input name="lastname" id="lastname" />
+    <br />
+    <h3 id="name"></h3>
+    <button onclick="create_name()">Create/Update full name</button>
+    <button onclick="toggle_name()">Show/Hide name</button>
+    <br />
+    <h2>Change colors</h2>
+    <button onclick="change_name_color()">Change name color</button>
+    <button onclick="change_bg_color()">Change background color</button>
+  </body>
+</html>
