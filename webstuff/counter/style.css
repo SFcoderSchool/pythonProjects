@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-size: 19px;
+  background-color: powderblue;
+}
+button {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 5px 20px 5px 20px;
+  border: 2px solid lightcoral;
+  color: lightcoral;
+}
+#reset {
+  color: navy;
+  border-color: navy;
+}

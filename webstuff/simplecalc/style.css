@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  text-align: center;
+}
+
+button {
+  padding: 5pt;
+  background-color: aliceblue;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5pt;
+}

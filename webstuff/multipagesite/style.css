@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(72, 142, 173);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav li {
+  list-style: none;
+  padding: 1rem 1.25rem;
+  background-color: rgb(103, 184, 222);
+  border-radius: 5pt;
+}
+
+nav li:hover {
+  background-color: rgb(73, 131, 158);
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+}
