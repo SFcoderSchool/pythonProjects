@@ -1,0 +1,29 @@
+/*
+Give students time to design the interface more
+*/
+
+body {
+  font-size: 20px;
+  background-color: aliceblue;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+}
+
+#question {
+  padding: 10px 0;
+  visibility: hidden;
+}
+
+#problem {
+  padding: 0 30px;
+}

@@ -1,0 +1,116 @@
+<!--
+Instructions: 
+1. Create the basic profile in HTML. Students should have the ability to add content that is personal and relevant to themselves. 
+The structure should be the same, but the content should be personal to each student. 
+Guide students through adding tags and how content should be placed between opening and closing tags.
+
+2. Introduce CSS after in a <style> tag in the <head>
+  - Go over basic color and font styles
+-->
+
+<!-- 
+Steps:
+1. introduce the html and html tags; NOTE: open and close tags must exist and wrap around the content
+2. start with the head and add the title tag; NOTE: head contains the website metadata (unseen data)
+
+3. next make the body tag and add visible content
+
+4. use the h1-h6 tags and play around with them
+5. use the p tag and write a short intro paragraph 
+6. use the strong and italics to note parts of the paragraph
+
+7. create an unordered list of hobbies/interest
+8. create an ordered list of fun facts
+
+9. create an image tag and link an image relating to either a hobby/interest 
+10. use the a tag and link to a website relating to a different hobby/interest
+
+11. add the style tag and style parts of the site 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>About Me</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        font-size: 32;
+      }
+      p {
+        font-size: 16;
+        font-family: Arial;
+      }
+      h3 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- h1 tag; experiment with different heading tags -->
+    <h1>Welcome to my website!</h1>
+    <h2>About Me</h2>
+    <!-- 
+  
+  Question: What do we notice between the h1 and the h2? 
+  Answer: h1 stands for heading 1, which means its larger than h2.
+  -->
+
+    <!-- img needs `src` to know the source of the image. `width` will set the width of the image. `alt` ensures that there is an alternative text if the image can't load. -->
+    <img
+      src="https://imgs.search.brave.com/DeTsWnfYH7PzLlOLrXSwOEQx_8yKoGTFnzfrrQkDjFg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAzLzE4LzYwLzYy/LzM2MF9GXzMxODYw/NjIxN19IazhqbzJN/Vm9JMzNTUU9rWXJm/T0Y5MjlKN0pnSVAw/UC5qcGc"
+      width="100%"
+      alt="developer"
+    />
+
+    <!-- Have students write some introduction around themselves. Introduce <strong> and <i> for bold and italics. -->
+    <p>
+      I am a teacher at <strong>TheCoderSchool</strong>. I like to
+      <i>teach</i> programming. We've spent the last few weeks looking at
+      <i>JavaScript</i>, but today, we're going to look at
+      <strong>HTML</strong> and <strong>CSS</strong>!
+    </p>
+
+    <!-- Students should write their own interests and fun facts in the lists below  -->
+    <h3>Interests</h3>
+    <p>Below are some interests I have!</p>
+    <ul>
+      <li>Coding</li>
+      <li>Running</li>
+      <li>Drawing</li>
+      <li>Sleeping</li>
+    </ul>
+
+    <h3>Fun Facts</h3>
+    <p>Below are some fun facts about me!</p>
+    <ol>
+      <li>
+        I often use different programming languages for different projects
+      </li>
+      <li>I've programmed a Search Engine before</li>
+      <li>I have been coding for 10 years already</li>
+    </ol>
+
+    <!-- 
+    Question: What is the difference between ul and ol? 
+    Answer: ol stands for ordered list, so we get numbers. ul stands for unordered list, so we get plain bullet points.
+  -->
+
+    <!-- Line break so code can be separated/spaced out -->
+    <br />
+    <p>
+      I learned how to create this website at
+      <a href="www.thecoderschool.com">The Coder School</a>
+    </p>
+    <br />
+    <br />
+  </body>
+</html>
