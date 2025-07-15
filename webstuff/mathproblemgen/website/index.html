@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math Problem Generator</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <p id="problem"></p>
+    <button onclick="gen_problem()">Make Problem</button>
+    <br />
+    <br />
+    <div id="question">
+      <label for="answer">Solution</label>
+      <input id="answer" name="answer" type="number" />
+      <button onclick="solve()">Solve</button>
+    </div>
+    <p id="feedback"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
