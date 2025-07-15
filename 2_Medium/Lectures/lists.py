@@ -13,6 +13,9 @@ print(cost[1])
 #going backwards
 print(fruits[-1])
 
+# find out the size of the list
+print(len(fruits))
+
 
 
 #3 how to add new items into existing list
