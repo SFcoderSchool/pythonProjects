@@ -110,6 +110,10 @@
 # Generate a 2d list of 10 rows each with 10 rcolumns of random numbers. Pick a random row and column and print out the number at that index. Then print the adjacent numbers.
 # Declare two variables, list1 and list2, and assign them to [1,2,3] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from list1 is the key and item from list2 is the value.
 # Declare two variables, fruits and prices, and assign them to ["apple","pears","oranges"] and [4,5,6]. Convert them into a dictionary named dict1 in a way that item from fruits is the key and item from prices is the value.
+# Create a 4x4 grid where every cell contains its row number. [[0, 0, 0, 0], [1, 1, 1, 1], ...]
+# Print all elements in the last column of the 2D list.
+# Print the diagonal elements of a square 2D list.
+# Multiply each number in a 2D list by 2.
 # Declare an integer called debitcard and assign it to 4253665879515786. Output ”valid” if the values are valid. Use these rules to determine if the debit card number is valid.
 # 1. It must start with a 4, 5, or 6.
 # 2. It must contain exactly 16 digits.
@@ -123,6 +127,7 @@
 # Declare a variable and assign it to an integer. Convert the integer into it's octal equivalent using an algorithm. No built in functions.
 # Declare a string and assign it to ”135246ABCzyx”. Output the sorted version of the string using these rules. Uppercase letters in front, lowercase letters after, then odd numbers, finally even numbers
 # Declare two variables assigned to two positive integers, then output the greatest common divisor of the two numbers. (105,45) would output 15, while (36, 42) would output 6.
+# Reverse each row in a 2D list.
 
 #10
 # Implement radix sort and call it on a list of 10 numbers, sorting from smallest to largest. You cannot use a library for this solution.
