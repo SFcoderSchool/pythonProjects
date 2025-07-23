@@ -107,7 +107,7 @@
 - [Card Duel w/ Functions](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cardduel)
 - [Math Problems](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathproblems)
 - [Math Wordle](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathwordle)
-- Go Fish
+- [Go Fish](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/gofish)
 ---
 
 - <code style="color : #B90000">**Lecture**</code>: [Nested List](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/nestedlistcreation)
