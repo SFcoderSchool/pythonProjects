@@ -26,4 +26,4 @@ print("Your safari has", size, "animals!")
 for i in range(size):
   print(safari[i])
 
-print(safari[random.randint(0,size)], "is very happy in the safari!")
+print(safari[random.randint(0,size-1)], "is very happy in the safari!")
