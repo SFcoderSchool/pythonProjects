@@ -67,6 +67,3 @@ n1 = [1,4,7,2]
 n2 = [7,6,5,4,2,8,4]
 w1 = ["hello","bye","iphone"]
 
-
-
-#problem 3 build a function to shuffle words.
