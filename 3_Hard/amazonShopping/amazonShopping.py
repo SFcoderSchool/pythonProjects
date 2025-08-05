@@ -1,13 +1,14 @@
 import os
 catalog = ["toy","food","furniture","tech","fruits"]
-
+prices = [8,3,4,10,3]
+budget = 100
+total = 0
 
 shopping_cart = []
 
 def print_catalog():
   for i in range(len(catalog)):
     print(i,catalog[i])
-
 
 def select_item(item):
   item = catalog[item]
@@ -28,5 +29,13 @@ while True:
     break
 
   ans = int(ans)
-  select_item(ans)
+  cost = prices[ans]
+  print("item costs", cost)
+  
+  if cost <= budget:
+    select_item(ans)
+    total = total + cost
+    budget = budget - cost
+  else:
+    print("Not within the budget")
   
