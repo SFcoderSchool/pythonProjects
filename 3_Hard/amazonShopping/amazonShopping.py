@@ -9,25 +9,24 @@ def print_catalog():
     print(i,catalog[i])
 
 
-def select_item():
-  num = input("Which item would you like to buy? (-1 to quit)")
-  num = int(num)
-  if num == -1:
-    return "quit"
-  item = catalog[num]
+def select_item(item):
+  item = catalog[item]
   shopping_cart.append(item)
-  return "continue"
 
 def checkout():
   total = len(shopping_cart) * 4
-  return total
+  print("Your total is: ", total)
 
 while True:
   os.system("clear")
   print(shopping_cart)
   print_catalog()
-  ans = select_item()
-  if ans == "quit":
-    price = checkout()
-    print("Your total is: ", price)
+
+  ans = input("Which item would you like to buy? (-1 to quit)")
+  if ans == "-1":
+    checkout()
     break
+
+  ans = int(ans)
+  select_item(ans)
+  
