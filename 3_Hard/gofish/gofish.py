@@ -36,6 +36,10 @@
 
 # - check to see who has the higher points or tie
 
+# Bonus
+# - add check to make sure user only asks for cards that are in their hand
+# - have bot randomly choose a card from their hand to ask for
+
 
 
 import random
@@ -97,6 +101,7 @@ def count_num(hand, num):
   count = 0
   while num in hand:
     hand.remove(num)
+    count = count + 1
   return count
 
 
