@@ -1,0 +1,1 @@
+#twitch chat emote system using dictionarys, translating words to specific emojis in a paragragh
