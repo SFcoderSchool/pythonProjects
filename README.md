@@ -64,7 +64,7 @@
 - <font color="#B90000">**Lecture**</font>: [Lists](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/Lectures/lists.py)
 - [Shopping Store](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/shoppingstore)
 - [Not My Neighbor](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/notmyneighbor)
-- Amongus
+- [Amongus](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/amongus)
 - [Avoid The Mine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/avoidthemine)
 - [Slot Machine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/slotmachine)
 - [Bingo](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/bingo)

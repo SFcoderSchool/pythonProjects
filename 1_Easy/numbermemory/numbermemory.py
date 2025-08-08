@@ -38,12 +38,12 @@ while True:
 
   print("number:",number)
   time.sleep(1+(score//5))
-  os.system("clear")
+  os.system("clear || cls")
 
   memory = input("whats the number? ")
   if number == memory:
     score = score + 1
-  os.system("clear")
+  os.system("clear || cls")
 
   if number != memory:
     break
