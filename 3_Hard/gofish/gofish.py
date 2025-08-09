@@ -14,34 +14,38 @@ bot = []
 player_score = 0
 bot_score = 0
 
-#
+#A function to simulate player picking up a card with a parameter
 def playerPickUp(card):
   global player_score
+  #if the player already has the card in their hand, form a pair and take out the card
   if card in player:
     player.remove(card)
     player_score += 1
     print("You got a pair.", card)
   else:
+    #otherwise add the new card to the player's hand
     player.append(card)
 
+#A function to simulate computer picking up a card with a parameter
 def computerPickUp(card):
   global bot_score
+  #if the computer already has the card in their hand, form a pair and take out the card
   if card in bot:
     bot.remove(card)
     bot_score +=1
     print("Bot got a pair.",card)
   else:
+    #otherwise add the new card to the computer's hand
     bot.append(card)
 
+#a function that creates a deck and pass out 5 cards to both player and computer
 def startgame():
-  global player_score,bot_score
-  #deck is a list of numbers with 4 copies each
+  #making the deck, a list of numbers with 4 copies each
   for s in range(1,14):
     for v in range(4):
       deck.append(s)
   
   random.shuffle(deck)
-  
   #passing out 5 cards to each player
   for t in range(5):
     card1 = deck.pop(0)
@@ -81,7 +85,6 @@ def playerMove():
 #if they do player loses this card remove(#)
 #bot also drops this card remove(#) and get a score
 #if they dont have this card bot has to go fish (draw a card from the deck)
-
 def botmove():
   global bot_score
   bot_random = bot[random.randint(0,len(bot)-1)]
@@ -101,10 +104,11 @@ def botmove():
 
 startgame()
 while True:
+  if len(deck) == 0:
+    break
   playerMove()
   if len(player) == 0:
     break
-  
   botmove()
   if len(bot) == 0:
     break
