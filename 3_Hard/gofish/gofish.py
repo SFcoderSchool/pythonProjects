@@ -1,137 +1,123 @@
-# Go Fish
-# player asks for a card, if the opponent contains the card then give player all the requested card
-# game ends when there is no more deck; person with the most sets (four of a kind) wins
-
-# Steps
-# - create the empty deck list
-# - create the build_deck function, fill the deck with numbers 1 to 13 4 times, the shuffle the list
-# - create the draw_card function, take the top card and store it in a variable, remove the top card, and return the stored top card
-
-# - create the player and bot lists
-# - make the start_game function, build the deck and pass out 5 cards to the player and bot
-# - call the function and print out the lists to check that it is working
-
-# - create the player_move function
-# - print out the player's list
-# - ask the user what number card they want
-# - check to see if the bot has the card, if they do then take all of the cards from the bot
-# - if they don't then say go fish and draw a card
-
-# - create the bot_move function
-# - random generate a number for the bot to take
-# - check to see if the player has the card, if they do then take all of the cards from the player
-# - if they don't then say go fish and draw a card
-
-# - call player_move and bot_move to test
-# - loop it and stop the loop when there are no more cards
-
-# - need a way to count numbers in for both player and bot lists
-# - create function count_num with 2 parameters (list, int)
-# - create a count variable and increment the count and remove from the list the number until there are no more
-# - return the count
-
-# - create points variable for player and bot
-# - use the count_num function to count all number 1 to 13 for both player and bot
-# - if the function returns 4 then increment the relative point variable
-
-# - check to see who has the higher points or tie
-
-# Bonus
-# - add check to make sure user only asks for cards that are in their hand
-# - have bot randomly choose a card from their hand to ask for
-
-
-
+# card game
+# go fish
+# the one with the most pairs wins
+# can't ask for a card you don't have
+# ask if they have a number
+# if they have number, don't draw card and take card from opponent and place the pair down on the table
+# same player asks for another number.
+# if player doesn't have number, draw from deck,next players turn
+# 
 import random
 deck = []
 player = []
 bot = []
+player_score = 0
+bot_score = 0
 
-def build_deck():
-  for i in range(1,14,1):
-    for j in range(4):
-      deck.append(i)
+#A function to simulate player picking up a card with a parameter
+def playerPickUp(card):
+  global player_score
+  #if the player already has the card in their hand, form a pair and take out the card
+  if card in player:
+    player.remove(card)
+    player_score += 1
+    print("You got a pair.", card)
+  else:
+    #otherwise add the new card to the player's hand
+    player.append(card)
 
+#A function to simulate computer picking up a card with a parameter
+def computerPickUp(card):
+  global bot_score
+  #if the computer already has the card in their hand, form a pair and take out the card
+  if card in bot:
+    bot.remove(card)
+    bot_score +=1
+    print("Bot got a pair.",card)
+  else:
+    #otherwise add the new card to the computer's hand
+    bot.append(card)
+
+#a function that creates a deck and pass out 5 cards to both player and computer
+def startgame():
+  #making the deck, a list of numbers with 4 copies each
+  for s in range(1,14):
+    for v in range(4):
+      deck.append(s)
+  
   random.shuffle(deck)
+  #passing out 5 cards to each player
+  for t in range(5):
+    card1 = deck.pop(0)
+    playerPickUp(card1)
+    
+    card2 = deck.pop(0)
+    computerPickUp(card2)
 
-def draw_card():
-  top_card = deck[0]
-  deck.pop(0)
-  return top_card
 
-def start_game():
-  build_deck()
-
-  for i in range(5):
-    card = draw_card()
-    player.append(card)
-
-    card = draw_card()
-    bot.append(card)
-
-def player_move():
+#write a function called playerMove
+#player asks for a card that they have in hand
+#check if the bot has this card
+#if they do bot loses this card remove(#)
+#you also drop this card remove(#) and get a score
+#if they dont have this card you have to go fish (draw a card from the deck)
+def playerMove():
+  global player_score
   print(player)
-  print("bot has", len(bot), "amount of cards")
+  card = int(input("Please ask the bot for a card you have in your hand:  "))
+  while card not in player:
+    card = int(input("Please ask the bot for a card you have in your hand:  "))
+  if card in bot:
+    bot.remove(card)
+    player.remove(card)
+    player_score +=1 
+    print("You got a pair",card)
+    print("Your score is",player_score)
+  elif card not in bot:
+    print("Go Fish")
+    card1 = deck.pop(0)
+    playerPickUp(card1)
+    
 
-  user = input("What card are you looking for? (1-13) ")
-  user = int(user)
+#write a function called botMove
+#bot asks for a random card that they have in hand
+#check if the player has this card
+#if they do player loses this card remove(#)
+#bot also drops this card remove(#) and get a score
+#if they dont have this card bot has to go fish (draw a card from the deck)
+def botmove():
+  global bot_score
+  bot_random = bot[random.randint(0,len(bot)-1)]
+  print("Do you have a",bot_random)
+  if bot_random in player:
+    bot.remove(bot_random)
+    player.remove(bot_random)
+    bot_score += 1
+    print("Bot Score is",bot_score) 
+  elif int(bot_random) not in player:
+    print("Gofish")
+    card2 = deck.pop(0)
+    computerPickUp(card2)
 
-  if user in bot:
-    while user in bot:
-      bot.remove(user)
-      player.append(user)
-  else:
-    print("go fish")
-    card = draw_card()
-    player.append(card)
+ 
+  
 
-def bot_move():
-  num = random.randint(1,13)
-
-  if num in player:
-    while num in player:
-      player.remove(num)
-      bot.append(num)
-  else:
-    print("go fish")
-    card = draw_card()
-    bot.append(card)
-
-def count_num(hand, num):
-  count = 0
-  while num in hand:
-    hand.remove(num)
-    count = count + 1
-  return count
-
-
-
-start_game()
-
+startgame()
 while True:
-  player_move()
   if len(deck) == 0:
     break
-  
-  bot_move()
-  if len(deck) == 0:
+  playerMove()
+  if len(player) == 0:
+    break
+  botmove()
+  if len(bot) == 0:
     break
 
-player_points = 0
-bot_points = 0
-
-for i in range(1, 14):
-  p_count = count_num(player, i)
-  if p_count == 4:
-    player_points = player_points + 1
-  
-  b_count = count_num(bot, i)
-  if b_count == 4:
-    bot_points = bot_points + 1
-  
-if player_points > bot_points:
-  print("Player wins")
-elif bot_points > player_points:
-  print("Bot wins")
+print("Bot Score:",bot_score)
+print("Player Score:",player_score)
+if player_score > bot_score:
+  print("Player Wins!!")
+elif bot_score > player_score:
+  print("Bot Wins!!")
 else:
-  print("tie")
+  print("You Tied...")
