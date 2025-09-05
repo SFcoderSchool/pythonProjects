@@ -5,26 +5,26 @@
 // - generate 2 random numbers from 1 to 13
 // - show 1 of the random numbers
 // - ask the user if the shown number is either higher or lower than the hidden number
+// - make it a function and use it
 
 // - check to see if the user got it correct
+// - make it a function and use it
+
 // - add a loop to repeat the game
 // - keep track of score and number of attempts
 // - stop the game when the user guesses 3 correct
 
 const prompt = require("prompt-sync")();
 
-let score = 0;
-let attempts = 0;
-
-while (true) {
-  hidden_card = parseInt(Math.random() * 13 + 1);
-  shown_card = parseInt(Math.random() * 13 + 1);
-
+function playTurn() {
   console.info("Hidden card: ?");
   console.info("Shown card: " + shown_card);
-  let answer = prompt("Higher or lower? ");
+  answer = prompt("Higher or lower? ");
   console.info("Hidden card: " + hidden_card);
   attempts = attempts + 1;
+}
+
+function checkResult() {
   if (answer === "higher") {
     if (hidden_card > shown_card) {
       console.info("Correct!");
@@ -40,6 +40,19 @@ while (true) {
       console.info("Wrong!");
     }
   }
+}
+
+let score = 0;
+let attempts = 0;
+let answer = "";
+
+while (true) {
+  hidden_card = parseInt(Math.random() * 13 + 1);
+  shown_card = parseInt(Math.random() * 13 + 1);
+
+  playTurn();
+  checkResult();
+
   if (score === 3) {
     break;
   }

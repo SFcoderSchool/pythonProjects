@@ -9,6 +9,7 @@
 // - check to see if the user chose rock
 // - if they did then check what the computer randomly chose
 // - output whether the user won loss or tied
+// - turn this into a function and call the function if the user chose "rock"
 
 // - repeat for paper and scissors
 
@@ -18,19 +19,17 @@
 
 const prompt = require("prompt-sync")();
 
-let cpu = parseInt(Math.random() * 3 + 1);
-
-let user = prompt("Enter your move: (rock, paper, or scissors) ");
-
-if (cpu === 1) {
-  console.log("CPU chose rock!");
-} else if (cpu === 2) {
-  console.log("CPU chose paper!");
-} else {
-  console.log("CPU chose scissors!");
+function cpuOutcome() {
+  if (cpu === 1) {
+    console.log("CPU chose rock!");
+  } else if (cpu === 2) {
+    console.log("CPU chose paper!");
+  } else {
+    console.log("CPU chose scissors!");
+  }
 }
 
-if (user === "rock") {
+function rockResults() {
   if (cpu === 1) {
     console.log("CPU chose rock! Tied game!");
   } else if (cpu === 2) {
@@ -38,7 +37,9 @@ if (user === "rock") {
   } else {
     console.log("CPU chose scissors! You win!");
   }
-} else if (user === "paper") {
+}
+
+function paperResults() {
   if (cpu === 1) {
     console.log("CPU chose rock! You win!");
   } else if (cpu === 2) {
@@ -46,7 +47,9 @@ if (user === "rock") {
   } else {
     console.log("CPU chose scissors! You lose!");
   }
-} else {
+}
+
+function scissorResults() {
   if (cpu === 1) {
     console.log("CPU chose rock! You lose!");
   } else if (cpu === 2) {
@@ -54,4 +57,18 @@ if (user === "rock") {
   } else {
     console.log("CPU chose scissors! Tied game!");
   }
+}
+
+let cpu = parseInt(Math.random() * 3 + 1);
+let user = prompt("Enter your move: (rock, paper, or scissors) ");
+
+console.log("You chose", user);
+cpuOutcome();
+
+if (user === "rock") {
+  rockResults();
+} else if (user === "paper") {
+  paperResults();
+} else {
+  scissorResults();
 }
