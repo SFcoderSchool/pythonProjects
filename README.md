@@ -115,15 +115,15 @@
 - [tictactoe](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/tictactoe)
 - [Glass Walk](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/glasswalk2d)
 - [Dungeon](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/dungeon)
-- Minecraft
+- [Minecraft](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minecraft)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 - Maze
 - [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
 - EmojiMatching
 - [Connect4](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connectfour)
-- Connect5
+- [Connect5](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connect5)
 - [Battle Ship](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
-- Ladders
+- [Ladders](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/ladders)
 - [Poker Hand Reader](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/pokerhandreader)
 
 ---
@@ -135,6 +135,7 @@
 - [Amazon Shopping](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/amazonShopping)
 - [Deck of Cards](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cards)
 - [Card Showdown](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/cards)
+- [Stocks Sim](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/stockmarket)
 - [Connections](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connections)
 - [Mafia](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mafia)
 - [Tomogatchi](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/tomogatchi)
