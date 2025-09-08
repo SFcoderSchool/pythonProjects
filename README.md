@@ -76,7 +76,7 @@
 - [Caesar Cipher](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/caesarcipher)
 - [Glass Bridge](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/glasswalk)
 - [Hangman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
-
+- [Typing Test](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/typingtest)
 ---
 
 - [5 Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/cardduellists)
@@ -90,7 +90,6 @@
 - [Emoji Memory Game](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/emojimemory)
 - [Wheel of Fortune](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/wheeloffortune)
 - [Snowman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
-- [Slot Machine](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/slotmachine)
 - [Build a Deck of Cards](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/deckofcards)
 - [War (using Deck of Cards)](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/warusingdeck)
 - [BlackJack with Lists](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/)
@@ -118,8 +117,7 @@
 - [Minecraft](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minecraft)
 - [Minefield](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/minefield)
 - Maze
-- [BattleShip](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
-- EmojiMatching
+- [Emoji Matching](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/emojiMatching)
 - [Connect4](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connectfour)
 - [Connect5](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/connect5)
 - [Battle Ship](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/battleship)
