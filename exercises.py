@@ -52,6 +52,7 @@
 # Using a while loop, roll a dice and print it out. Stop when you roll a 6.
 # Declare a variable and assign it to any number, and output the last digit of the number. Input 2345 would output 5, while 9876 would output 6.
 
+
 #4
 # Declare a variable and assign it to the list of colors "red", "blue", "green". Print the second color in the list.
 # Declare a variable and assign it to a list of three numbers. Print the first number in the list multiplied by 10.
@@ -66,6 +67,7 @@
 # Declare a variable and assign it to a string value. Then output the string where each letter in the word must be one of these characters: 't', 'u', 'r', 'i', 'n', 'g'. Otherwise omit that letter. An example would be: 'fun rigid' would output: 'unrigi'.
 # Declare a string variable. Print only the letters "c", "o", "d", "e", and "r" if they appear in the word.
 # Declare a variable and assign it to a positive integer. Take the remainder of the number divided by 7, assume 0 is ”Sunday”, and 6 is ”Saturday”, and the other days in string form correspond to numbers accordingly. Output which day of the week it is.
+# Ask for 10 number inputs. Add them to a total and print the total.
 
 
 #5
@@ -118,6 +120,7 @@
 # Create a 4x4 identity matrix (1s on the diagonal, 0s elsewhere).
 # Dictionary of players and scores. Find and print the player with the highest score.
 # Dictionary of students and test scores. Calculate the average test score of this class.
+# Ask the user to input a string. Use a dictionary to count how many times each vowel appears.
 # Declare an integer called debitcard and assign it to 4253665879515786. Output ”valid” if the values are valid. Use these rules to determine if the debit card number is valid.
 # 1. It must start with a 4, 5, or 6.
 # 2. It must contain exactly 16 digits.
