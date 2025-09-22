@@ -1,8 +1,4 @@
-#Questions: What number is the largest?
-
-# 4, 6, 2, 3
-
-#How do you know? 
+#Questions: How would you analyze all the numbers one at a time
 
 #Step 1 Build list
 n = [3,2,3,5]
@@ -11,48 +7,27 @@ n = [3,2,3,5]
 
 #Step 2 Read through each value. 
 
-  #1 print each value
-  # print(n[0])
-  # print(n[1])
-  # print(n[2])
-  # print(n[3])
-  
-  #2 build a loop to find the index values
-  # for i in range(0,4,1):
-  #   print(i)
-  
-  
-  #3 index with newly found numbers
-  # for i in range(0,4,1):
-  #   print(n[i])
+#1 print each value
+print(n[0])
+print(n[1])
+print(n[2])
+print(n[3])
+
+#2 too many prints; notice a pattern
+#  build a loop to find the index values; i matches that pattern
+for i in range(0,4,1):
+  print(i)
+
+#3 index with newly found numbers
+for i in range(0,4,1):
+  print(n[i])
+
+#4 what if you don't know how many numbers are in the list
+for i in range(0,len(n),1):
+  print(n[i])
 
 ###################################################
-
-#Step 3 First value will be stored as largest value. All subsequent larger values will replace the previous.
-
-#using list in line 3
-# biggest = n[0]
-# for i in range(1,4):
-#   if n[i] > biggest:
-#     biggest = n[i]
-# print(biggest)
-
-###################################################
-#Step 4 What if i dont want to keep counting how many values are in my list? Use len() function to retrieve info
-
-# print(len(n))
-
-#apply into loop to replace the max parameter in the range function
-# biggest = n[0]
-# for i in range(1,len(n)):
-#   if n[i] > biggest:
-#     biggest = n[i]
-# print(biggest)
-
-
-
-###################################################
-#Problem 1 build a list of 5 colors and print all of them 1 by 1 using a for loop.
+#Problem 1 build a list of 5 colors and print all of them 1 by 1 using a for loop (include white as a color).
 
 
 
@@ -61,6 +36,3 @@ n = [3,2,3,5]
 
 
 
-
-
-#Problem 3 using the same list, print the first, third and fifth colors in the list.

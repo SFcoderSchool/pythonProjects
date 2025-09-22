@@ -27,7 +27,6 @@ import random
 words = ["potato","sandwich","apple","sick","plant","battle","bottle"]
 
 for i in range(3):
-  #save word
   randomIndex = random.randint(0, len(words)-1)
   word = words[randomIndex]
   # word = "potato"
@@ -42,7 +41,6 @@ for i in range(3):
     scramble = scramble + scrambleLetters[i]
   print(scramble)
   
-  #guess until correct
   guess = input("guess the word: ")
   score = 1
   while guess!=word:
@@ -56,7 +54,7 @@ for i in range(3):
       scramble = scramble + scrambleLetters[i]
     print(scramble)
      
-    guess = input("guess `the word: ")
+    guess = input("guess the word: ")
     score = score + 1
   
   print("score:", score)
