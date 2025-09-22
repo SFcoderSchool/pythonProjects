@@ -32,6 +32,4 @@ for i in range(1,11,1):
 #exercises:
 #print numbers 1 through 100 inclusive
 #print numbers 100 through 1 inclusive
-#print numbers 1-50 by 2's inslusive
-#print numbers 10-1 by 1 inclusive (backwards)
-#print numbers 1-100. using a conditional, stop for loop at 50
+
