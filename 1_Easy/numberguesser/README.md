@@ -57,21 +57,7 @@ while True:
     print("Incorrect")
 ```
 
-8. Hints hot or cold (10 numbers away from correct)
-
-```python
-if number == guess:
-  print("Correct!")
-  break
-elif number - 10 < guess:
-  print("Hot")
-elif number + 10 > guess:
-  print("Hot")
-else:
-  print("cold")
-```
-
-9. Hints high or low
+8. Hints high or low
 
 ```python
 if number == guess:
@@ -83,7 +69,7 @@ if number < guess:
   print("guess lower")
 ```
 
-10. Track number of tries
+9. Track number of tries
 
 ```python
 tries = 0
@@ -121,4 +107,15 @@ while True:
     print("guess lower")
     high = guess - 1
     high = str(high)
+```
+
+2. Additional hints: hot or cold (10 numbers away from correct)
+
+```python
+if number == guess:
+  print("Correct!")
+elif number - 10 < guess and number + 10 > guess:
+  print("Hot")
+else:
+  print("cold")
 ```
