@@ -36,14 +36,19 @@ for i in range(10):
   if number == guess:
     print("Correct!")
     break
-  if number > guess:
+  elif number > guess:
     print("guess higher")
     low = guess+1
     low = str(low)
-  if number < guess:
+  elif number < guess:
     print("guess lower")
     high = guess - 1
     high = str(high)
+
+  if number - 10 < guess and number + 10 > guess:
+    print("Hot")
+  elif number != guess:
+    print("cold")
 
 tries = str(tries)
 print("you took " + tries + " guesses")
