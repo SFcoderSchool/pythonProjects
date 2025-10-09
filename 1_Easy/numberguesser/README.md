@@ -28,22 +28,8 @@ else:
 guess = int(guess)
 ```
 
-5. Using a for loop, allow user to try 10 times
+5. Using a while loop, allow user to guess until correct
 6. Stop when the user guesses correctly
-
-```python
-for i in range(0,10,1):
-  question = "guess a number between 1 and 100"
-  guess = input(question)
-
-  if number == guess:
-    print("Correct!")
-    break
-  else:
-    print("Incorrect")
-```
-
-7. Using a while loop, allow user to guess until correct
 
 ```python
 while True:
@@ -57,7 +43,7 @@ while True:
     print("Incorrect")
 ```
 
-8. Hints high or low
+7. Hints high or low
 
 ```python
 if number == guess:
@@ -69,7 +55,7 @@ if number < guess:
   print("guess lower")
 ```
 
-9. Track number of tries
+8. Track number of tries
 
 ```python
 tries = 0
@@ -112,10 +98,8 @@ while True:
 2. Additional hints: hot or cold (10 numbers away from correct)
 
 ```python
-if number == guess:
-  print("Correct!")
-elif number - 10 < guess and number + 10 > guess:
+if number - 10 < guess and number + 10 > guess:
   print("Hot")
-else:
+elif number != guess:
   print("cold")
 ```
