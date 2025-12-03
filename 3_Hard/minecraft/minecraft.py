@@ -20,22 +20,26 @@ def generateGrid(length, width):
 
   amount = int(length/6 * width/6)
   for i in range(amount):
-    skbidi_rizz = random.randint(0, width -1)
-    fantum_tax = random.randint(0, length -1)
-    grid[fantum_tax][skbidi_rizz] = "💎" 
-    grid[fantum_tax -1][skbidi_rizz] = "💎"
-    grid[fantum_tax][skbidi_rizz-1] = "💎" 
-    grid[fantum_tax-1][skbidi_rizz-1] = "💎" 
+    random_col = random.randint(0, width -1)
+    random_row = random.randint(0, length -1)
+    grid[random_row][random_col] = "💎" 
+    grid[random_row -1][random_col] = "💎"
+    grid[random_row][random_col-1] = "💎" 
+    grid[random_row-1][random_col-1] = "💎" 
   #put 5 lava at random places
   for i in range(5):
-    one = random.randint(0,width -1)
-    two = random.randint(0, length -1)
-    grid[two][one] = lava
-    grid[two][one-1] = lava
-    grid[two][one+1] = lava
+    random_col = random.randint(0,width - 2)
+    random_row = random.randint(0, length -1)
+    grid[random_row][random_col] = lava
+    grid[random_row][random_col-1] = lava
+    grid[random_row][random_col+1] = lava
     
   grid[0][0] = Steve
   return grid
+
+def printGrid(grid):
+  for i in range(0, len(grid), 1):
+    print("".join(grid[i]))
 
 wall= generateGrid(20,10)
 inventory = 0
@@ -70,6 +74,6 @@ def move_player():
 
 while True:
   os.system('clear')
-  pprint(wall)
+  printGrid(wall)
   move_player()
   
