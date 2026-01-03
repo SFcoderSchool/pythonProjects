@@ -1,7 +1,6 @@
 # Ladder and Snakes
 import random
 from pprint import pprint
-import copy
 import os
 import time
 
@@ -16,7 +15,15 @@ tile = "🟫"
 enemy = "💀"
 enemy_y= 19
 enemy_x = 0
-2
+
+def copyGrid(grid):
+  new_grid = []
+  for i in range(len(grid)):
+    new_grid.append([])
+    for j in range(len(grid[i])):
+      new_grid[i].append(grid[i][j])
+  return new_grid
+
 def generateGrid(length, width):
   global grid, grid2
   grid = []
@@ -37,7 +44,7 @@ def generateGrid(length, width):
     snakecolumn = random.randint(0,19)
 
     grid[snakerow][snakecolumn] = snake
-  grid2 = copy.deepcopy(grid)
+  grid2 = copyGrid(grid)
   grid[player_y][player_x] = player
           
 generateGrid(20,20)

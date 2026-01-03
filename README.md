@@ -32,9 +32,13 @@
 
 ---
 
+- <font color="#B90000">**Lecture**</font>: [While Loops](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/whileloops.py)
+- [Random Number Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numberguesser)
+
+---
+
 - <font color="#B90000">**Lecture**</font>: [For Loops](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/Lectures/forloops.py)
 - [Turtle Shapes](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/turtleshapes)
-- [Random Number Guesser](https://github.com/SFcoderSchool/pythonProjects/tree/main/1_Easy/numberguesser)
 
 ---
 
@@ -77,6 +81,7 @@
 - [Glass Bridge](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/glasswalk)
 - [Hangman](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/hangman)
 - [Typing Test](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/typingtest)
+
 ---
 
 - [5 Card Duel](https://github.com/SFcoderSchool/pythonProjects/tree/main/2_Medium/cardduellists)
@@ -107,6 +112,7 @@
 - [Math Problems](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathproblems)
 - [Math Wordle](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mathwordle)
 - [Go Fish](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/gofish)
+
 ---
 
 - <code style="color : #B90000">**Lecture**</code>: [Nested List](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/nestedlistcreation)
@@ -138,6 +144,7 @@
 - [Mafia](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/mafia)
 - [Tomogatchi](https://github.com/SFcoderSchool/pythonProjects/tree/main/3_Hard/tomogatchi)
 - PokemonBattle
+
 #### Advanced - <font color="green">_Classes/Objects_</font>
 
 ---
