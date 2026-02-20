@@ -27,14 +27,14 @@ from termcolor import colored
 import os
 import random   
 # print(colored("hello","red"))
-# print(colored("hello Alen is goofy","cyan")
+# print(colored("hello Alen is goofy","cyan"))
 
 
 print(colored("Please choose a five letter word ","blue"))
 
 
 words=["money","bread","hello","kwami","babys","dinos","pizza","apple","dance","anvil","print","coder","watch","shoes","books","witch","human","board","sting","drink","solar","power","phone","meter","moody","liter","biter","crumb","plump","first"]
-word=words[random.randint(0,len(words))]
+word=words[random.randint(0,len(words)-1)]
 
 
 nomatch="white"
@@ -47,7 +47,6 @@ for turns in range(6):
   for i in range(5):
     colors.append(nomatch) 
 
-  
   guess=input()
   while len(guess) != 5 :
     guess = input("put in a new 5 letter word \n")
@@ -58,6 +57,10 @@ for turns in range(6):
       colors[i]=correct
     elif guess[i] in word:
       colors[i]=match
+
+  # print(colors)
+  # print(guess)
+  # print(word)
   
   for i in range(5):  
     print(colored(guess[i],colors[i]),end="")
