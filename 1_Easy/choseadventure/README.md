@@ -3,6 +3,7 @@
 ## Background
 
 A text-based choice story. Try to survive till the end.
+<img src="./flowchart.svg">
 
 ## Steps
 
@@ -11,16 +12,15 @@ A text-based choice story. Try to survive till the end.
 3. check to see what they inputted and output the message depending out their choice
 
 ```python
-print("Your plane crash lands on a deserted island. \n")
+print('"Two paths ahead," it says. "Choose wisely!"')
+print()
 
-level1 = input("1. Search for food\n2. Search for water\n3. Search for shelter\n")
 
-if level1 == "1":
-  print("You find some fruits and berries. \n")
-elif level1 == "2":
-  print("You find a lake with pirahnas and get eaten. Game Over!\n") #GAMEOVER
-elif level1 == "3":
-  print("You find a cave \n")
+path = input("Go 'left' toward the dark cave, or 'right' toward the sunny meadow? ")
+path = path.lower()
+
+if path == "left":
+  print("You approach the dark cave. A sign reads: DRAGON INSIDE!")
 ```
 
 4. choose a choice and output the second choices to the user
@@ -28,25 +28,21 @@ elif level1 == "3":
 6. mark certain lines as gameover!
 
 ```python
-if level1 == "1":
-  print("You find some fruits and berries. \n")
-  level2 = input("1. Eat the berry\n2. Feed fruits and berries to a nearby squirrel\n3. Look for other options for food\n")
-  if level2 == "1":
-    print("You ate the poisonous berries and died. Game Over") #GAMEOVER
-  elif level2 == "2":
-    print("the squirrel dies from the poisonous berries! Phew! Close one!")
-  elif level2 =="3":
-    print("You find a coconut tree and eat the coconut. \n")
+path = input("Go 'left' toward the dark cave, or 'right' toward the sunny meadow? ")
+path = path.lower()
+
+if path == "left":
+    print("You approach the dark cave. A sign reads: DRAGON INSIDE!")
+
+    cave_choice = input("Do you 'go in' or 'run away'? ")
+    cave_choice = cave_choice.lower()
+    if cave_choice == "go in":
+        # DEAD END 1
+        print("You tiptoe in and trip over a rock. CRASH!")
+        print("The dragon wakes up. You are lost in the cave. GAME OVER!")
+    elif cave_choice == "run away":
+        print("You sprint away and stumble into a hidden clearing.")
+        print("A glowing door is built into a big oak tree.")
 ```
 
 7. continue adding more levels
-
-```python
-elif level1 == "3":
-  print("You find a cave \n")
-  level2 = input("1. Enter the cave\n2. Look for other options\n")
-  if level2 == "1":
-    print("You enter the cave and find a treasure chest. \n")
-  elif level2 == "2":
-    print("You find an abandon cabin")
-```
