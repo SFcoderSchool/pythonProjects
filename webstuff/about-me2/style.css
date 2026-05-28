@@ -1,0 +1,55 @@
+body {
+  font-family: Georgia, serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f6f0;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1a1a6e;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #2e4a8f;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #2e4a8f;
+  padding-left: 1rem;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+.animal {
+  color: red;
+}
+
+#current {
+  background-color: lightgreen;
+}
+
+.highlight {
+  color: #2e4a8f;
+  font-weight: bold;
+}
+
+.footer {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}

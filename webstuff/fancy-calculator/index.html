@@ -1,0 +1,50 @@
+<!-- 
+-build the buttons and the calculator
+- work through some basic styling to get things in order
+  - note the flex and grid breifly
+  - feel free to give them numbers and units
+- focus on function in js and connection of buttons
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div id="history" class="history"></div>
+      <div id="display" class="display">0</div>
+
+      <div class="buttons">
+        <button class="wide" id="btnClear">C</button>
+        <button></button>
+        <button class="op" id="btnDiv">÷</button>
+
+        <button class="digit" id="btn7">7</button>
+        <button class="digit" id="btn8">8</button>
+        <button class="digit" id="btn9">9</button>
+        <button class="op" id="btnMul">x</button>
+
+        <button class="digit" id="btn4">4</button>
+        <button class="digit" id="btn5">5</button>
+        <button class="digit" id="btn6">6</button>
+        <button class="op" id="btnSub">-</button>
+
+        <button class="digit" id="btn1">1</button>
+        <button class="digit" id="btn2">2</button>
+        <button class="digit" id="btn3">3</button>
+        <button class="op" id="btnAdd">+</button>
+
+        <button class="digit wide" id="btn0">0</button>
+        <button class="digit" id="btnDot">.</button>
+        <button class="equals" id="btnEquals">=</button>
+      </div>
+      <p id="previous"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
