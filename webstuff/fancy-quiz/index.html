@@ -1,0 +1,46 @@
+<!-- 
+- make the start screen and start styling
+- hide the start screen and make a question screen
+- introduce inputs and how js grabs input data
+- work through 1 or 2 questions in js first before adding a bunch
+- make helper functions as needed to separate the code lingo with words 
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Start screen -->
+    <div id="startScreen" class="screen">
+      <h1>Quiz Game</h1>
+      <p>10 questions. How many can you get right?</p>
+      <button onclick="startQuiz()">Let's Go!</button>
+    </div>
+
+    <!-- Question screen -->
+    <div id="questionScreen" class="screen hidden">
+      <p id="questionNumber" class="question-number">Question 1 of 10</p>
+      <p id="questionText" class="question-text"></p>
+      <div class="input-row">
+        <input id="answerInput" type="text" placeholder="Your answer..." />
+        <button onclick="submitAnswer()">Submit</button>
+      </div>
+      <p id="answerFeedback" class="feedback hidden"></p>
+      <button id="nextBtn" class="hidden" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Results screen -->
+    <div id="resultsScreen" class="screen hidden">
+      <h2 id="resultTitle"></h2>
+      <p id="resultScore"></p>
+      <p id="resultMessage"></p>
+      <button onclick="resetQuiz()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

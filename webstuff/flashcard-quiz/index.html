@@ -1,0 +1,50 @@
+<!-- 
+- cover div in the html portion to group things
+- work in parts starting with 1 card then css for the card
+- cover the spacing using css
+- talk about connecting logic using getElementById in js
+- once most things work for both style and css for 1 card move on to more
+- feel free to have students make some up 
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flashcard Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🃏 Flashcard Quiz</h1>
+    <p>Click a card to flip it and reveal the answer!</p>
+    <p class="score">Cards flipped: <span id="scoreDisplay">0</span> / 4</p>
+
+    <div class="cards">
+      <div class="card" id="card1">
+        <p id="question1">What is the capital of France?</p>
+        <p id="answer1" class="hidden">Paris</p>
+        <button onclick="flipCard(1)">Flip</button>
+      </div>
+
+      <div class="card" id="card2">
+        <p id="question2">How many legs does a spider have?</p>
+        <p id="answer2" class="hidden">8</p>
+        <button onclick="flipCard(2)">Flip</button>
+      </div>
+
+      <div class="card" id="card3">
+        <p id="question3">What is the furthest planet from the Sun?</p>
+        <p id="answer3" class="hidden">Neptune</p>
+        <button onclick="flipCard(3)">Flip</button>
+      </div>
+
+      <div class="card" id="card4">
+        <p id="question4">What is the longest river in the world?</p>
+        <p id="answer4" class="hidden">The Nile</p>
+        <button id="button4" onclick="flipCard(4)">Flip</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

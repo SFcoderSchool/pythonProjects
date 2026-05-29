@@ -25,3 +25,18 @@ count10();
 print10Hello();
 count10();
 print10Hello();
+
+// returning data; function call will become the data that gets returned
+function sum(x, y) {
+  return x + y;
+}
+
+// return also stops the function in its tracks
+function printHiMax5Times(n) {
+  for (let i = 0; i < n; i = i + 1) {
+    if (i == 5) {
+      return;
+    }
+    console.log("Hi");
+  }
+}

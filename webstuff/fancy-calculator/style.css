@@ -1,0 +1,75 @@
+/* goal is to cover some grid and some flex briefly */
+
+body {
+  background-color: #111;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.calc {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 260px;
+}
+
+.history {
+  font-size: 0.8rem;
+  color: #555;
+  text-align: right;
+  margin-bottom: 0.25rem;
+  min-height: 1.2em;
+}
+
+.display {
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+button {
+  background-color: #2e2e2e;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/*
+========================
+EXTRA STUFF IF TIME
+========================
+*/
+
+button:hover {
+  background-color: #444;
+}
+
+.op {
+  background-color: #3a3a3a;
+  color: #f0c040;
+}
+.wide {
+  grid-column: span 2;
+}
+.equals {
+  background-color: #f0a500;
+  color: #111;
+}
+.equals:hover {
+  background-color: #ffc533;
+}
