@@ -2,6 +2,7 @@
 # roll dice to move around the board, buy properties, and collect rent
 
 # Steps
+# - Start with 10ish spaces for each list and when finished with logic fill in the rest
 # - create a list of board spaces
 # - create a list of property prices for each space (0 if not buyable)
 # - create a list of rent prices for each space (0 if not buyable)
