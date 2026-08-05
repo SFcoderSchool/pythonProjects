@@ -51,31 +51,37 @@
 
 import time
 import random
+import os
 
 story = "Once upon a time, a young explorer named Mira set out into the Whispering Forest. She carried only a lantern, a map drawn by her grandmother, and a small wooden compass. Deep in the forest, the trees began to glow faintly blue, guiding her further inside. Mira found a hidden cave behind a waterfall, exactly where the map said it would be. Inside the cave she discovered an old chest, locked tight with a rusted iron latch. She used her compass as a makeshift key, and the latch clicked open with a soft hiss. Inside the chest was not gold, but a single seed that glowed the same blue as the trees. Mira planted the seed at the edge of the forest, and a new tree began to grow instantly. The villagers later named the tree the Heartwood, a symbol of courage and curiosity. Mira returned many times, but she always said the forest still had more secrets to find."
 
-window_size = 60
 
-story = story + (" " * window_size)
+# ---------------- Fancy Display ----------------------
 
-visible = ""
-for j in range(window_size):
-  visible = visible + story[j]
+# window_size = 60
 
-for i in range(len(story)):
-  print("\r" + visible, end="", flush=True)
-  time.sleep(0.04)
+# story = story + (" " * window_size)
 
-  new_letter = story[(i + window_size) % len(story)]
+# visible = ""
+# for j in range(window_size):
+#   visible = visible + story[j]
 
-  new_visible = ""
-  for j in range(1, len(visible)):
-    new_visible = new_visible + visible[j]
-  new_visible = new_visible + new_letter
+# for i in range(len(story)):
+#   print("\r" + visible, end="", flush=True)
+#   time.sleep(0.04)
 
-  visible = new_visible
+#   new_letter = story[(i + window_size) % len(story)]
 
-print()
+#   new_visible = ""
+#   for j in range(1, len(visible)):
+#     new_visible = new_visible + visible[j]
+#   new_visible = new_visible + new_letter
+
+#   visible = new_visible
+
+# print()
+
+# ---------------- Fancy Display ----------------------
 
 questions = [
   "What was the name of the young explorer?",
@@ -105,6 +111,11 @@ answers = [
 
 asked = []
 score = 0
+
+print(story)
+
+input("Enter to start Quiz: ")
+os.system("clear")
 
 print("\nThe story is over! Time for 5 questions.\n")
 
