@@ -1,10 +1,10 @@
-// Quiz Game
-
 let totalQuestions = 10;
 let currentIndex = 0;
 let score = 0;
 
-// --- Questions stored as plain variables ---
+let currentQuestion = "";
+let currentAnswer = "";
+
 let q1 = "What planet is closest to the Sun?";
 let q2 = "How many sides does a hexagon have?";
 let q3 = "What is the capital of Japan?";
@@ -27,82 +27,56 @@ let a8 = "206";
 let a9 = "purple";
 let a10 = "cheetah";
 
-// --- Get question or answer by number ---
-function getQuestion(num) {
+function loadCurrentQuestion(num) {
   if (num === 1) {
-    return q1;
+    currentQuestion = q1;
+    currentAnswer = a1;
   }
   if (num === 2) {
-    return q2;
+    currentQuestion = q2;
+    currentAnswer = a2;
   }
   if (num === 3) {
-    return q3;
+    currentQuestion = q3;
+    currentAnswer = a3;
   }
   if (num === 4) {
-    return q4;
+    currentQuestion = q4;
+    currentAnswer = a4;
   }
   if (num === 5) {
-    return q5;
+    currentQuestion = q5;
+    currentAnswer = a5;
   }
   if (num === 6) {
-    return q6;
+    currentQuestion = q6;
+    currentAnswer = a6;
   }
   if (num === 7) {
-    return q7;
+    currentQuestion = q7;
+    currentAnswer = a7;
   }
   if (num === 8) {
-    return q8;
+    currentQuestion = q8;
+    currentAnswer = a8;
   }
   if (num === 9) {
-    return q9;
+    currentQuestion = q9;
+    currentAnswer = a9;
   }
-  return q10;
+  if (num === 10) {
+    currentQuestion = q10;
+    currentAnswer = a10;
+  }
 }
 
-function getAnswer(num) {
-  if (num === 1) {
-    return a1;
-  }
-  if (num === 2) {
-    return a2;
-  }
-  if (num === 3) {
-    return a3;
-  }
-  if (num === 4) {
-    return a4;
-  }
-  if (num === 5) {
-    return a5;
-  }
-  if (num === 6) {
-    return a6;
-  }
-  if (num === 7) {
-    return a7;
-  }
-  if (num === 8) {
-    return a8;
-  }
-  if (num === 9) {
-    return a9;
-  }
-  return a10;
+function showScreen(id) {
+  document.getElementById("startScreen").classList.add("hidden");
+  document.getElementById("questionScreen").classList.add("hidden");
+  document.getElementById("resultsScreen").classList.add("hidden");
+  document.getElementById(id).classList.remove("hidden");
 }
 
-function showScreen(screenId) {
-  let startScreen = document.getElementById("startScreen");
-  startScreen.classList.add("hidden");
-  let questionScreen = document.getElementById("questionScreen");
-  questionScreen.classList.add("hidden");
-  let resultsScreen = document.getElementById("resultsScreen");
-  resultsScreen.classList.add("hidden");
-
-  let currentScreen = document.getElementById(screenId);
-  currentScreen.classList.remove("hidden");
-}
-
-// --- Quiz flow ---
 function startQuiz() {
   currentIndex = 0;
   score = 0;
@@ -112,11 +86,12 @@ function startQuiz() {
 
 function loadQuestion() {
   let num = currentIndex + 1;
+  loadCurrentQuestion(num);
 
   document.getElementById("questionNumber").textContent =
     "Question " + num + " of " + totalQuestions;
+  document.getElementById("questionText").textContent = currentQuestion;
 
-  document.getElementById("questionText").textContent = getQuestion(num);
   document.getElementById("answerInput").value = "";
 
   hideFeedback();
@@ -124,29 +99,23 @@ function loadQuestion() {
 }
 
 function submitAnswer() {
-  let userAnswer = document
-    .getElementById("answerInput")
-    .value.trim()
-    .toLowerCase();
-  let correctAnswer = getAnswer(currentIndex + 1);
+  let userAnswer = document.getElementById("answerInput").value.toLowerCase();
 
   if (userAnswer === "") {
-    return;
-  }
-
-  if (userAnswer === correctAnswer) {
-    score = score + 1;
-    showFeedback("Correct!", "correct");
+    // do nothing, wait for them to type something
   } else {
-    showFeedback("The answer was: " + correctAnswer, "wrong");
+    if (userAnswer === currentAnswer) {
+      score = score + 1;
+      showFeedback("Correct!", "correct");
+    } else {
+      showFeedback("The answer was: " + currentAnswer, "wrong");
+    }
+    document.getElementById("nextBtn").classList.remove("hidden");
   }
-
-  document.getElementById("nextBtn").classList.remove("hidden");
 }
 
 function nextQuestion() {
   currentIndex = currentIndex + 1;
-
   if (currentIndex < totalQuestions) {
     loadQuestion();
   } else {
@@ -154,50 +123,48 @@ function nextQuestion() {
   }
 }
 
-// --- Feedback helpers ---
 function showFeedback(message, type) {
   let feedback = document.getElementById("answerFeedback");
   feedback.textContent = message;
-  feedback.className = "feedback " + type;
-  feedback.classList.remove("hidden");
+  feedback.classList.remove("hidden", "correct", "wrong");
+  feedback.classList.add(type);
 }
 
 function hideFeedback() {
   let feedback = document.getElementById("answerFeedback");
   feedback.textContent = "";
-  feedback.className = "feedback hidden";
-}
-
-// --- Results ---
-function getResultTitle(s) {
-  if (s >= 9) {
-    return "Amazing! ";
-  }
-  if (s >= 6) {
-    return "Well done! ";
-  }
-  return "Nice try! ";
-}
-
-function getResultMessage(s) {
-  if (s >= 9) {
-    return "Near perfect — you really know your stuff!";
-  }
-  if (s >= 6) {
-    return "Solid effort — keep it up!";
-  }
-  return "Keep practising — you'll get there!";
-}
-
-function showResults() {
-  showScreen("resultsScreen");
-  document.getElementById("resultTitle").textContent = getResultTitle(score);
-  document.getElementById("resultScore").textContent =
-    "You scored " + score + " out of " + totalQuestions;
-  document.getElementById("resultMessage").textContent =
-    getResultMessage(score);
+  feedback.classList.add("hidden");
+  feedback.classList.remove("correct", "wrong");
 }
 
 function resetQuiz() {
   showScreen("startScreen");
+}
+
+// BONUS
+
+let resultTitle = "";
+let resultMessage = "";
+
+function calculateResultText(s) {
+  if (s >= 9) {
+    resultTitle = "Amazing!";
+    resultMessage = "Near perfect — you really know your stuff!";
+  } else if (s >= 6) {
+    resultTitle = "Well done!";
+    resultMessage = "Solid effort — keep it up!";
+  } else {
+    resultTitle = "Nice try!";
+    resultMessage = "Keep practising — you'll get there!";
+  }
+}
+
+function showResults() {
+  showScreen("resultsScreen");
+  calculateResultText(score);
+
+  document.getElementById("resultTitle").textContent = resultTitle;
+  document.getElementById("resultScore").textContent =
+    "You scored " + score + " out of " + totalQuestions;
+  document.getElementById("resultMessage").textContent = resultMessage;
 }
