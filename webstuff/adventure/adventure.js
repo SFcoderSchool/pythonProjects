@@ -149,35 +149,6 @@ function askChoice() {
 }
 
 // ==============================
-//  OUTCOME CHECK
-// ==============================
-
-function isGameOver() {
-  if (health <= 0) {
-    console.log("\n Ship destroyed. Mission failed.");
-    return true;
-  }
-  if (fuel <= 0) {
-    console.log("\nOut of fuel. Drifting in space...");
-    return true;
-  }
-  return false;
-}
-
-function getFinalRank() {
-  if (crystals >= 15) {
-    return " LEGENDARY EXPLORER";
-  }
-  if (crystals >= 10) {
-    return " Master Explorer";
-  }
-  if (crystals >= 5) {
-    return " Skilled Explorer";
-  }
-  return " Rookie Explorer";
-}
-
-// ==============================
 //  THE ADVENTURE — 5 rounds
 // ==============================
 
@@ -203,6 +174,35 @@ for (let round = 1; round <= 5; round++) {
   }
 
   askChoice();
+}
+
+// ==============================
+//  OUTCOME CHECK (BONUS)
+// ==============================
+
+function isGameOver() {
+  if (health <= 0) {
+    console.log("\n Ship destroyed. Mission failed.");
+    return true;
+  }
+  if (fuel <= 0) {
+    console.log("\nOut of fuel. Drifting in space...");
+    return true;
+  }
+  return false;
+}
+
+function getFinalRank() {
+  if (crystals >= 15) {
+    return " LEGENDARY EXPLORER";
+  }
+  if (crystals >= 10) {
+    return " Master Explorer";
+  }
+  if (crystals >= 5) {
+    return " Skilled Explorer";
+  }
+  return " Rookie Explorer";
 }
 
 // ==============================
