@@ -16,7 +16,6 @@ function printStatus() {
   console.log("Health   : " + health + " / 100");
   console.log("Fuel     : " + fuel);
   console.log("Crystals : " + crystals);
-  console.log("Shields  : " + (shieldsUp ? "ON" : "OFF"));
   console.log("------------------------------");
 }
 
@@ -42,16 +41,14 @@ function scanPlanet() {
     return;
   }
 
-  let found = randomNumber(0, 3);
+  let found = randomNumber(1, 3);
 
-  if (found === 0) {
-    console.log("  Nothing found. Fuel wasted.");
-  } else if (found === 1) {
-    let gain = randomNumber(1, 4);
+  if (found === 1) {
+    let gain = 10;
     crystals = crystals + gain;
     console.log("  Found " + gain + " crystals! Total: " + crystals);
   } else if (found === 2) {
-    let fuelGain = randomNumber(5, 15);
+    let fuelGain = 10;
     fuel = fuel + fuelGain;
     console.log("  Found a fuel pod! +" + fuelGain + " fuel. Total: " + fuel);
   } else {
@@ -60,27 +57,11 @@ function scanPlanet() {
   }
 }
 
-function activateShields() {
-  if (fuel < 10) {
-    console.log("\n Not enough fuel for shields! (need 10)");
-    return;
-  }
-  shieldsUp = true;
-  fuel = fuel - 10;
-  console.log("\n Shields activated! (-10 fuel)");
-}
-
 function encounterAlien() {
   console.log("\n An alien ship attacks!");
-  if (shieldsUp) {
-    console.log("  Shields absorb the hit! No damage.");
-    shieldsUp = false;
-    console.log("  Shields powered down.");
-  } else {
-    let damage = randomNumber(10, 30);
-    health = health - damage;
-    console.log("  Direct hit! -" + damage + " health. Now: " + health);
-  }
+  let damage = randomNumber(10, 30);
+  health = health - damage;
+  console.log("  Direct hit! -" + damage + " health. Now: " + health);
 }
 
 function mineAsteroid() {
@@ -94,11 +75,11 @@ function mineAsteroid() {
   }
 
   if (randomChance(60)) {
-    let gain = randomNumber(2, 6);
+    let gain = 10;
     crystals = crystals + gain;
     console.log("  Success! +" + gain + " crystals. Total: " + crystals);
   } else {
-    let damage = randomNumber(5, 20);
+    let damage = 15;
     health = health - damage;
     console.log(
       "  Debris hit the ship! -" + damage + " health. Now: " + health,
@@ -124,15 +105,13 @@ function askChoice() {
   console.log("\nWhat do you do?");
   console.log("  1 - Scan planet  (-5 fuel, random reward)");
   console.log("  2 - Mine asteroid  (-8 fuel, 60% crystal chance)");
-  console.log("  3 - Activate shields  (-10 fuel, blocks next attack)");
-  console.log("  4 - Trade crystals for fuel  (-3 crystals, +25 fuel)");
+  console.log("  3 - Trade crystals for fuel  (-3 crystals, +25 fuel)");
 
   let choice = prompt(
     "Choose an action:\n" +
       "1 = Scan planet\n" +
       "2 = Mine asteroid\n" +
-      "3 = Activate shields\n" +
-      "4 = Trade crystals for fuel",
+      "3 = Trade crystals for fuel",
   );
 
   if (choice === "1") {
@@ -140,8 +119,6 @@ function askChoice() {
   } else if (choice === "2") {
     mineAsteroid();
   } else if (choice === "3") {
-    activateShields();
-  } else if (choice === "4") {
     refuel();
   } else {
     console.log("  Unknown choice — turn skipped!");
@@ -217,4 +194,16 @@ printStatus();
 if (!isGameOver()) {
   console.log("Final rank: " + getFinalRank());
   console.log("Great flying, " + playerName + "!");
+}
+
+// BONUS : Shield to block 1 Alien encounter
+
+function activateShields() {
+  if (fuel < 10) {
+    console.log("\n Not enough fuel for shields! (need 10)");
+    return;
+  }
+  shieldsUp = true;
+  fuel = fuel - 10;
+  console.log("\n Shields activated! (-10 fuel)");
 }

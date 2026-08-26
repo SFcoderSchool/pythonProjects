@@ -1,6 +1,7 @@
 # Wordle
 # Copy of the popular nytimes game Wordle
-# NOTE: will be using colored(text, color) to color the text https://pypi.org/project/termcolor/
+# NOTE: (replit) will be using colored(text, color) to color the text https://pypi.org/project/termcolor/ 
+# NOTE: will be now using escape colors for coloring the text :)
 
 # Steps
 # 1. start with a word and store it in a variable
@@ -23,23 +24,31 @@
 # 1. add a word bank and select a random word to be the chosen word
 
 
-from termcolor import colored
+# from termcolor import colored
 import os
 import random   
 # print(colored("hello","red"))
 # print(colored("hello Alen is goofy","cyan"))
 
 
-print(colored("Please choose a five letter word ","blue"))
+# print(colored("Please choose a five letter word ","blue"))
+
+RED = '\033[31m'
+GREEN = '\033[32m'
+YELLOW = '\033[33m'
+BLUE = '\033[34m'
+WHITE = '\033[0m'
+
+print(BLUE + "Please choose a five letter word ")
 
 
 words=["money","bread","hello","kwami","babys","dinos","pizza","apple","dance","anvil","print","coder","watch","shoes","books","witch","human","board","sting","drink","solar","power","phone","meter","moody","liter","biter","crumb","plump","first"]
 word=words[random.randint(0,len(words)-1)]
 
 
-nomatch="white"
-match="yellow"
-correct = "green"
+nomatch=WHITE
+match=YELLOW
+correct = GREEN
 guesses=[]
 
 for turns in range(6):
@@ -63,7 +72,7 @@ for turns in range(6):
   # print(word)
   
   for i in range(5):  
-    print(colored(guess[i],colors[i]),end="")
+    print(colors[i] + guess[i],end="")
   print() 
   if guess==word:
     print("good job")
