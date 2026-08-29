@@ -14,6 +14,10 @@ print(9+9) #generates math
 #3 words
 print("hello")
 print(hello) #why did this break? Is this a integer?
+# Numbers as words and not mathematical data
+print("415-123-4567")
+# Would we represent zip code as an int or a String?
+# What about the amount of wheels a car has?
 
 
 #4 variables hold data that can be retrieve, used, and changed. can hold strings, integers, or variables
