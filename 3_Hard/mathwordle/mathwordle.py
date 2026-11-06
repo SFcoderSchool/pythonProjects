@@ -1,11 +1,17 @@
-import colored #color error
+# import colored #color error
 import random
 import os
-
+ 
 #Do not give the student how to fix the exceeding 5 character string math problem. See if they have solutions
 # common solution: randomize until we get a 5 character string
 
 #build functions one at a time and test with gameplay
+
+RED = '\033[31m'
+GREEN = '\033[32m'
+YELLOW = '\033[33m'
+BLUE = '\033[34m'
+WHITE = '\033[0m'
 
 def add():
 	number = random.randint(0, 9)
@@ -64,12 +70,12 @@ def checker(userInput):
 	for c in range(0, 9, 2):
 		if userInput[c] == equation[c]:
 			# slots[0] = userInput[0]
-			print (colored.Fore.green + userInput[c] , end = " ")
+			print (GREEN + userInput[c] , end = " ")
 		elif userInput[c] in equation:
-			print (colored.Fore.yellow + userInput[c], end = " ")
+			print (YELLOW+ userInput[c], end = " ")
 		else:
-			print (colored.Fore.white + userInput[c], end = " ")
-	print (colored.Fore.white+"")
+			print (WHITE + userInput[c], end = " ")
+	print (WHITE+"")
 
 
 
